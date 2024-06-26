@@ -16,3 +16,4 @@
 ![Home](../../mockups/home.png)
 - A success message appears for 5 Seconds on the right bottom of the screen
     - `Course {name} has been successfully archived`
+- The archived course is not visible in the home screen any longer
