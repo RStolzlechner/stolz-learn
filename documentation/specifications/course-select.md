@@ -3,14 +3,14 @@
 - not implemented
 
 ## Precondition
-- user is on the home screen (see [Navigate To Home](./navigate-to-home/navigate-to-home.md))
-- at least one course is created (see [Create a Course](./course-create/course-create.md))
+- The user is on the home screen (see [Navigate To Home](./navigate-to-home/navigate-to-home.md))
+- At least one course is created (see [Create a Course](./course-create/course-create.md))
 
 ![Home](../mockups/home.png)
 
 ## Description
-- each course is displayed as a card
-- a hover over a card shows a cursor-pointer
-- a click on the card navigates to the course overview, where the course statistics and some operations are shown
+- Each course is displayed as a card.
+- A hover over a card shows a cursor pointer.
+- A click on the card navigates to the course overview, where the course statistics and some operations are shown.
 
-![Statictics](../mockups/course-selected.png)
+![Statistics](../mockups/course-selected.png)
