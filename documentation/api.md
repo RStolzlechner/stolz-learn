@@ -11,7 +11,7 @@
     - **Body:** List of IDs
     - **BadRequest:** If any ID is not found in the database
     - **Returns:** List of course objects
-    - **Notes:** Ensure the API supports partial valid requests, returning useful information even if some IDs are invalid.
+    - **Notes:** Fetch course objects
 
 3. **[PUT] /course/archive/{id}**
     - **BadRequest:** If the ID is not found in the database
@@ -52,19 +52,31 @@
 
 ### Question Management
 
-9. **[POST] /question**
+9. **[POST] /question/ids**
+    - **Body:** `{ courseId: GUID, randomOrder: boolean, limit: int }`
+    - **Returns:** List of IDs
+    - **Notes:** This endpoint allows fetching IDs based on the course Id. If randomOrder is set, the Ids are randomly ordered.
+
+10. **[POST] /question/get-by-ids**
+    - **Body:** List of IDs
+    - **BadRequest:** If any ID is not found in the database
+    - **Returns:** List of question objects
+    - **Notes:** fetch question objects
+
+
+11. **[POST] /question**
     - **Body:** Question object
     - **BadRequest:** If the answer or question is empty
     - **Hub:** `onCourseChanged(id)`
     - **Returns:** OK if success
 
-10. **[PUT] /question**
+12. **[PUT] /question**
     - **Body:** Question object
     - **BadRequest:** If not found in the database
     - **Hub:** `onCourseChanged(id)`
     - **Returns:** OK if success
 
-11. **[PUT] /question/delete** (Sets deletion flag)
+13. **[PUT] /question/delete** (Sets deletion flag)
     - **Body:** Question object
     - **BadRequest:** If not found in the database
     - **Hub:** `onCourseChanged(id)`
