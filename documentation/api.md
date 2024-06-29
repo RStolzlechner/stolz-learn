@@ -63,7 +63,6 @@
     - **Returns:** List of question objects
     - **Notes:** fetch question objects
 
-
 11. **[POST] /question**
     - **Body:** Question object
     - **BadRequest:** If the answer or question is empty
