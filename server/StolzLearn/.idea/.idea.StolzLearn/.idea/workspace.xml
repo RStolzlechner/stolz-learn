@@ -4,20 +4,79 @@
     <projectFile profileName="http">StolzLearn.Core/StolzLearn.Core.csproj</projectFile>
     <projectFile profileName="https">StolzLearn.Core/StolzLearn.Core.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Controller/TestController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/.idea/.idea.StolzLearn.Core/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/.idea/.idea.StolzLearn.Core/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/StolzLearn.Core.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/StolzLearn.Core.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/StolzLearn.Core.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/rider.project.model.nuget.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StolzLearn.Core/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/StolzLearn.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/StolzLearn.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.csproj.CopyComplete" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/StolzLearn.Core.sourcelink.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/apphost" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/ref/StolzLearn.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/refint/StolzLearn.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/staticwebassets/msbuild.build.StolzLearn.Core.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StolzLearn.Core.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StolzLearn.Core.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/StolzLearn.Core.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/StolzLearn.Core.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/StolzLearn.Core.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/obj/rider.project.restore.info" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 4
@@ -29,12 +88,22 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.StolzLearn.Core: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "4-first-features",
+    "last_opened_file_path": "/home/ricardo/src/stolz-learn",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora_aws",
+      "postgresql"
+    ],
     "rider.external.source.directories": [
       "/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
       "/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache",
@@ -82,13 +151,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719671383071</updated>
-      <workItem from="1719671385095" duration="105000" />
+      <workItem from="1719671385095" duration="2341000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
