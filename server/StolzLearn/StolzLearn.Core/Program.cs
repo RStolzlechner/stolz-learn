@@ -1,3 +1,6 @@
+using System.Reflection;
+using FluentMigrator.Runner;
+using FluentMigrator.Runner.Conventions;
 using StolzLearn.Core.Configuration;
 using StolzLearn.Core.Extensions;
 using StolzLearn.Core.HealthChecks;
@@ -14,6 +17,20 @@ builder.Services.AddControllers();
 //configurations
 builder.Services.AddAndValidateOptions<PostgresqlOptions>(PostgresqlOptions.Position);
 
+//migrations
+if (runMigrations)
+{
+    var postgresqlOptions = builder.Configuration.GetValidated<PostgresqlOptions>(PostgresqlOptions.Position);
+
+    builder.Services.AddSingleton<IConventionSet>(new DefaultConventionSet("stolz_learn_core", null))
+        .AddFluentMigratorCore().ConfigureRunner(rb => rb
+            .AddPostgres()
+            .WithGlobalConnectionString(postgresqlOptions.ConnectionString)
+            .WithGlobalCommandTimeout(new TimeSpan(0, 10, 0))
+            .ScanIn(Assembly.GetExecutingAssembly()))
+        .AddLogging(c => c.AddFluentMigratorConsole());
+}
+
 //health checks
 builder.Services.AddHealthChecks()
     .AddCheck<PostgresqlHealthCheck>("Postgresql");
@@ -22,7 +39,9 @@ var app = builder.Build();
 
 if (runMigrations)
 {
-    Console.WriteLine("Start Migrating...");
+    using var scope = app.Services.CreateScope();
+    var migrator = scope.ServiceProvider.GetService<IMigrationRunner>();
+    migrator?.MigrateUp();
     return;
 }
 
