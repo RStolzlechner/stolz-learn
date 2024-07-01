@@ -3,6 +3,7 @@ using StolzLearn.Core.Extensions;
 using StolzLearn.Core.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
+var runMigrations = args.Contains("--migrate");
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -18,6 +19,12 @@ builder.Services.AddHealthChecks()
     .AddCheck<PostgresqlHealthCheck>("Postgresql");
 
 var app = builder.Build();
+
+if (runMigrations)
+{
+    Console.WriteLine("Start Migrating...");
+    return;
+}
 
 app.MapHealthChecks("/healthz");
 
