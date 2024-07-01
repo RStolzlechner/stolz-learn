@@ -1,5 +1,6 @@
 using StolzLearn.Core.Configuration;
 using StolzLearn.Core.Extensions;
+using StolzLearn.Core.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,13 @@ builder.Services.AddControllers();
 //configurations
 builder.Services.AddAndValidateOptions<PostgresqlOptions>(PostgresqlOptions.Position);
 
+//health checks
+builder.Services.AddHealthChecks()
+    .AddCheck<PostgresqlHealthCheck>("Postgresql");
+
 var app = builder.Build();
+
+app.MapHealthChecks("/healthz");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
