@@ -7,6 +7,7 @@ using StolzLearn.Core.Extensions;
 using StolzLearn.Core.HealthChecks;
 using StolzLearn.Core.Postgres;
 using StolzLearn.Core.Repositories;
+using StolzLearn.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var runMigrations = args.Contains("--migrate");
@@ -29,6 +30,13 @@ builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 builder.Services.AddScoped<IAnswerRepository, AnswerRepository>();
 builder.Services.AddScoped<IQuestionnaireRepository, QuestionnaireRepository>();
+
+//services
+builder.Services.AddScoped<IAnswerService, AnswerService>();
+builder.Services.AddScoped<ICourseService, CourseService>();
+builder.Services.AddScoped<ICourseStatisticService, CourseStatisticService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IQuestionnaireService, QuestionnaireService>();
 
 //migrations
 if (runMigrations)

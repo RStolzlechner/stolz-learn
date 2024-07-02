@@ -9,23 +9,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/Repositories/QuestionRepositoryTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/CourseStatistic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/AnswerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/CourseService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/CourseStatisticService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/IAnswerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/ICourseService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/ICourseStatisticService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/IQuestionService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/IQuestionnaireService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/QuestionService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/QuestionnaireService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Repositories/QuestionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/QuestionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/PostgresIntegrationTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/PostgresIntegrationTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/StolzLearn.Core.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/StolzLearn.Core.Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/StolzLearn.Core.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/StolzLearn.Core.Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/StolzLearn.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/StolzLearn.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/StolzLearn.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/StolzLearn.Core.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/ref/StolzLearn.Core.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/ref/StolzLearn.Core.Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/refint/StolzLearn.Core.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/refint/StolzLearn.Core.Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +83,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.StolzLearn.Core: migrate">
+  <component name="RunManager" selected=".NET Launch Settings Profile.StolzLearn.Core">
     <configuration name="StolzLearn.Core: migrate" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/StolzLearn.Core/bin/Debug/net8.0/StolzLearn.Core" />
       <option name="PROGRAM_PARAMETERS" value="--migrate" />
@@ -140,7 +136,7 @@
       <workItem from="1719671385095" duration="4089000" />
       <workItem from="1719838065283" duration="4825000" />
       <workItem from="1719842917771" duration="903000" />
-      <workItem from="1719908539764" duration="9652000" />
+      <workItem from="1719908539764" duration="10433000" />
     </task>
     <servers />
   </component>
@@ -181,13 +177,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/StolzLearn.Core/Program.cs</url>
-          <line>23</line>
+          <line>24</line>
           <properties documentPath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" containingFunctionPresentation="">
             <startOffsets>
-              <option value="737" />
+              <option value="769" />
             </startOffsets>
             <endOffsets>
-              <option value="785" />
+              <option value="817" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
