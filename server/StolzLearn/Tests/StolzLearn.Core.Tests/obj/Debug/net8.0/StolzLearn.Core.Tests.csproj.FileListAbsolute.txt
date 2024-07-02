@@ -118,3 +118,5 @@
 /home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.pdb
 /home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.genruntimeconfig.cache
 /home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/ref/StolzLearn.Core.Tests.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Castle.Core.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Moq.dll

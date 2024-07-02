@@ -1,4 +1,4 @@
-using StolzLearn.Core.Models;
+using StolzLearn.Core.Models.CourseStatistic;
 using StolzLearn.Core.Repositories;
 
 namespace StolzLearn.Core.Services;
@@ -10,17 +10,11 @@ public class CourseStatisticService(IQuestionRepository questionRepository, IAns
         var questions = await questionRepository.SelectByCourseId(courseId);
         var answers = await answerRepository.SelectByCourseId(courseId);
         
-        //todo go on here 
-        //timeline (per day) 
-        //each day has a list of quesionIds, correctAnswerCount, totalAnswerCount //containing also questions and answers of the past
-
         var questionIdDateDictionary = questions
             .GroupBy(q => q.DateCreate.Date)
             .ToDictionary(
                 group => group.Key, 
-                group => group.ToList().Select(g => g.Id));
-        
-        
+                group => group.ToList().Select(g => g.Id).ToList());
         var answerDateDictionary = answers
             .GroupBy(a => a.DateCreate.Date)
             .ToDictionary(
@@ -31,17 +25,32 @@ public class CourseStatisticService(IQuestionRepository questionRepository, IAns
         allDatesSet.UnionWith(answerDateDictionary.Keys);
         var allDates = allDatesSet.Distinct().OrderBy(d => d);
 
-        var statistics = new Dictionary<DateTime, CourseStatistic>();
+        var statistic = new CourseStatistic();
 
-        var questionCount = 0;
-        
         foreach (var date in allDates)
         {
-            questionIdDateDictionary.TryGetValue(date, out var questionIds);
-            answerDateDictionary.TryGetValue(date, out var dayAnswers);
+            var questionsAtDate = questionIdDateDictionary.GetValueOrDefault(date) ?? [];
+            var answersAtDate = answerDateDictionary.GetValueOrDefault(date) ?? [];
+
+            var lastDayDataPoint = statistic.DayDataPoints.LastOrDefault();
+            var dayDataPoint = new DayDataPoint()
+            {
+                Date = date, 
+                QuestionDataPoints = lastDayDataPoint?.QuestionDataPoints.Select(qdp =>
+                    new QuestionDataPoint
+                    {
+                        QuestionId = qdp.QuestionId,
+                        TotalAnswerCnt = qdp.TotalAnswerCnt,
+                        CorrectAnswerCnt = qdp.CorrectAnswerCnt
+                    }).ToList() ?? []
+            };
+
+            foreach (var id in questionsAtDate) dayDataPoint.AddQuestion(id);
+            foreach (var answer in answersAtDate) dayDataPoint.AddAnswer(answer);
             
-            questionCount += questionIds?.Count() ?? 0;
+            statistic.AddDayDataPoint(dayDataPoint);
         }
-        throw new NotImplementedException();
+
+        return statistic;
     }
 }
