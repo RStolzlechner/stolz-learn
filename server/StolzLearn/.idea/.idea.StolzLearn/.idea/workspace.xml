@@ -9,21 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Postgres/DbConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Postgres/IDbConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/IntegrationTestSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/PostgresIntegrationTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/Repositories/AnswerRepositoryTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documentation/er.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../../documentation/er.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/dataSources/10245ab4-cb9e-41ad-b52f-7227b52179e1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/dataSources/10245ab4-cb9e-41ad-b52f-7227b52179e1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.github/workflows/server-tests-on-pr.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Configuration/PostgresqlOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Configuration/PostgresqlOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Migrations/Migration_202407011551.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Migrations/Migration_202407011551.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Models/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/Answer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Repositories/AnswerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/AnswerRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/StolzLearn.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/StolzLearn.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.sln" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +125,7 @@
       <workItem from="1719671385095" duration="4089000" />
       <workItem from="1719838065283" duration="4825000" />
       <workItem from="1719842917771" duration="903000" />
-      <workItem from="1719908539764" duration="4935000" />
+      <workItem from="1719908539764" duration="5420000" />
     </task>
     <servers />
   </component>

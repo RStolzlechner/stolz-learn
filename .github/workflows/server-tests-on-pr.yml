@@ -1,0 +1,36 @@
+name: Run server tests on master pull request.
+on:
+  pull_request:
+    types: [ opened, synchronize ]
+    paths:
+      - 'server/**/*'
+  workflow_dispatch:
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      #Checkout
+      - uses: actions/checkout@v3
+      #Setup dotnet
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+      #Build server
+      - name: Build
+        run: dotnet build
+      #Start Database
+      - name: Start database
+        run: docker compose up -d stolz-learn.core.postgres
+      #Run Migrations
+      - name: Run Migrations
+        run: |
+          dotnet run --project ./server/StolzLearn/StolzLearn.Core/StolzLearn.Core.csproj --migrate
+      #Test server
+      - name: Test
+        run: dotnet test
+      #Stop database
+      - name: Stop all Processes
+        run: docker compose down
