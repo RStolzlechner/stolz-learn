@@ -1,4 +1,5 @@
 using StolzLearn.Core.Models;
+using StolzLearn.Core.Postgres;
 using StolzLearn.Core.Repositories;
 
 namespace StolzLearn.Core.Services;
@@ -11,11 +12,15 @@ public class CourseService(ICourseRepository courseRepository) : ICourseService
 
     public Task<Guid> Insert(Course course, bool inTransaction = true)
     {
-        throw new NotImplementedException();
+        if (!inTransaction) return courseRepository.Insert(course);
+
+        return TransactionHelper.InTransaction(() => courseRepository.Insert(course));
     }
 
     public Task Update(Course course, bool inTransaction = true)
     {
-        throw new NotImplementedException();
+        if (!inTransaction) return courseRepository.Update(course);
+
+        return TransactionHelper.InTransaction(() => courseRepository.Update(course));
     }
 }

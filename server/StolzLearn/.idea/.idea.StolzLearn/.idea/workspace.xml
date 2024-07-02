@@ -9,19 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/CourseStatistic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/AnswerService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/CourseService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/CourseStatisticService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/IAnswerService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/ICourseService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/ICourseStatisticService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/IQuestionService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/IQuestionnaireService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/QuestionService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/QuestionnaireService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Postgres/TransactionHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Services/CourseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/CourseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Services/QuestionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/QuestionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Services/QuestionnaireService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/QuestionnaireService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +128,7 @@
       <workItem from="1719671385095" duration="4089000" />
       <workItem from="1719838065283" duration="4825000" />
       <workItem from="1719842917771" duration="903000" />
-      <workItem from="1719908539764" duration="10433000" />
+      <workItem from="1719908539764" duration="11155000" />
     </task>
     <servers />
   </component>
