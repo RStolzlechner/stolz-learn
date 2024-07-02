@@ -45,10 +45,10 @@ public class PostgresIntegrationTest
         return DbConnection.QuerySingleAsync<Guid>(sql, new DynamicParameters(new { name, number, isArchived }));
     }
     
-    protected Task<Guid> InsertQuestion(Guid courseId, string question = "a question", string correctAnswer = "a correct answer")
+    protected Task<Guid> InsertQuestion(Guid courseId, string question = "a question", string correctAnswer = "a correct answer", bool isDeleted = false)
     {
-        var sql = "INSERT INTO question (course_id, question_text, correct_answer) VALUES (@courseId, @question, @correctAnswer) RETURNING  id";
-        return DbConnection.QuerySingleAsync<Guid>(sql, new DynamicParameters(new { courseId, question, correctAnswer }));
+        var sql = "INSERT INTO question (course_id, question_text, correct_answer, deleted) VALUES (@courseId, @question, @correctAnswer, @isDeleted) RETURNING  id";
+        return DbConnection.QuerySingleAsync<Guid>(sql, new DynamicParameters(new { courseId, question, correctAnswer, isDeleted }));
     }
     
     protected Task<Guid> InsertQuestionnaire(Guid courseId)
