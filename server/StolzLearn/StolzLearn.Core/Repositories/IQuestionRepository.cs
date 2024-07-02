@@ -6,6 +6,7 @@ public interface IQuestionRepository
 {
     //Select
     Task<IEnumerable<Guid>> SelectIdsByQuery(QuestionQuery query);
+    Task<IEnumerable<Question>> SelectByCourseId(Guid courseId);
     Task<IEnumerable<Question>> SelectByIds(IEnumerable<Guid> ids);
     
     //Insert

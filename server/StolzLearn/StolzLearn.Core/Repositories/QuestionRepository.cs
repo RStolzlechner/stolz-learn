@@ -22,6 +22,16 @@ public class QuestionRepository(IDbConnection connection) : IQuestionRepository
             ids.OrderBy(x => Guid.NewGuid()) : ids;
     }
 
+    public Task<IEnumerable<Question>> SelectByCourseId(Guid courseId)
+    {
+        var sql = """
+                  SELECT * FROM question WHERE course_id = @courseId AND NOT deleted ORDER BY date_create;
+                  """;
+        var p = new DynamicParameters(new { courseId });
+        
+        return connection.QueryAsync<Question>(sql, p);
+    }
+
     public Task<IEnumerable<Question>> SelectByIds(IEnumerable<Guid> ids)
     {
         var idList = ids.ToList();

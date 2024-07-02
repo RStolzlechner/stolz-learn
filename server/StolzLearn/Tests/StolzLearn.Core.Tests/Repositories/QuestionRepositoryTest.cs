@@ -71,6 +71,24 @@ public class QuestionRepositoryTest : PostgresIntegrationTest
         
         Assert.That(ids.Count(), Is.EqualTo(1));
     }
+    
+    [Test]
+    public async Task SelectByCourseId_ShouldSelectQuestions()
+    {
+        var courseId = await InsertCourse();
+        await InsertQuestion(courseId, "a name");
+        await InsertQuestion(courseId, "second name");
+        await InsertQuestion(courseId, "and the third one");
+        
+        var sut = new QuestionRepository(DbConnection);
+        
+        var questions = (await sut.SelectByCourseId(courseId)).ToList();
+        
+        Assert.That(questions.Count(), Is.EqualTo(3));
+        Assert.That(questions.ElementAt(0).QuestionText, Is.EqualTo("a name"));
+        Assert.That(questions.ElementAt(1).QuestionText, Is.EqualTo("second name"));
+        Assert.That(questions.ElementAt(2).QuestionText, Is.EqualTo("and the third one"));
+    }
 
     [Test]
     public async Task SelectByIds_ShouldSelectQuestions()
