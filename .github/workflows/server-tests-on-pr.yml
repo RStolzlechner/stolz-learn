@@ -20,7 +20,7 @@ jobs:
           dotnet-version: '8.0.x'
       #Build server
       - name: Build
-        run: dotnet build
+        run: dotnet build ./server/StolzLearn/StolzLearn.sln
       #Start Database
       - name: Start database
         run: docker compose up -d stolz-learn.core.postgres
@@ -30,7 +30,7 @@ jobs:
           dotnet run --project ./server/StolzLearn/StolzLearn.Core/StolzLearn.Core.csproj --migrate
       #Test server
       - name: Test
-        run: dotnet test
+        run: dotnet test ./server/StolzLearn/StolzLearn.sln
       #Stop database
       - name: Stop all Processes
         run: docker compose down

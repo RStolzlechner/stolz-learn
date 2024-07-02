@@ -9,8 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.github/workflows/server-tests-on-pr.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.github/workflows/server-tests-on-pr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.github/workflows/server-tests-on-pr.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +124,7 @@
       <workItem from="1719671385095" duration="4089000" />
       <workItem from="1719838065283" duration="4825000" />
       <workItem from="1719842917771" duration="903000" />
-      <workItem from="1719908539764" duration="5420000" />
+      <workItem from="1719908539764" duration="5574000" />
     </task>
     <servers />
   </component>
