@@ -8,6 +8,7 @@ using StolzLearn.Core.HealthChecks;
 using StolzLearn.Core.Postgres;
 using StolzLearn.Core.Repositories;
 using StolzLearn.Core.Services;
+using StolzLearn.Core.SignalR;
 
 var builder = WebApplication.CreateBuilder(args);
 var runMigrations = args.Contains("--migrate");
@@ -17,6 +18,13 @@ var runMigrations = args.Contains("--migrate");
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+builder.Services.AddSignalR(options =>
+{
+    options.KeepAliveInterval = TimeSpan.FromSeconds(10);
+    options.EnableDetailedErrors = true;
+    options.ClientTimeoutInterval = TimeSpan.FromSeconds(120);
+    options.MaximumReceiveMessageSize = 512 * 1024; // 512 KB
+});
 
 //configurations
 builder.Services.AddAndValidateOptions<PostgresqlOptions>(PostgresqlOptions.Position);
@@ -78,5 +86,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapControllers();
+
+app.MapHub<CoreHub>("stolz-learn-core-hub");
 
 app.Run();

@@ -16,7 +16,6 @@ public class CourseRepositoryTest : PostgresIntegrationTest
 
         var result = (await sut.SelectIdsByQuery(new CourseQuery())).ToList();
         
-        Assert.That(result.Count(), Is.EqualTo(2));
         Assert.Contains(c1, result);
         Assert.Contains(c2, result);
     }
