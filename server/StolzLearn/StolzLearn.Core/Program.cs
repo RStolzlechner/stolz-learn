@@ -4,6 +4,7 @@ using FluentMigrator.Runner.Conventions;
 using StolzLearn.Core.Configuration;
 using StolzLearn.Core.Extensions;
 using StolzLearn.Core.HealthChecks;
+using StolzLearn.Core.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 var runMigrations = args.Contains("--migrate");
@@ -16,6 +17,12 @@ builder.Services.AddControllers();
 
 //configurations
 builder.Services.AddAndValidateOptions<PostgresqlOptions>(PostgresqlOptions.Position);
+
+//repositories
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
+builder.Services.AddScoped<IAnswerRepository, AnswerRepository>();
+builder.Services.AddScoped<IQuestionnaireRepository, QuestionnaireRepository>();
 
 //migrations
 if (runMigrations)

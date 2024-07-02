@@ -9,21 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/Answer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/Course.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/CourseQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/Question.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/QuestionQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/Questionnaire.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/IAnswerRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/ICourseRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/IQuestionRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/IQuestionnaireRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/dataSources/10245ab4-cb9e-41ad-b52f-7227b52179e1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/dataSources/10245ab4-cb9e-41ad-b52f-7227b52179e1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/dataSources/10245ab4-cb9e-41ad-b52f-7227b52179e1/storage_v2/_src_/database/stolz_learn_core.nYTdvw/schema/stolz_learn_core.nYTdvw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/dataSources/10245ab4-cb9e-41ad-b52f-7227b52179e1/storage_v2/_src_/database/stolz_learn_core.nYTdvw/schema/stolz_learn_core.nYTdvw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/AnswerRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/CourseRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/QuestionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/QuestionnaireRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Migrations/Migration_202407011551.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Migrations/Migration_202407011551.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +128,7 @@
       <workItem from="1719671385095" duration="4089000" />
       <workItem from="1719838065283" duration="4825000" />
       <workItem from="1719842917771" duration="903000" />
-      <workItem from="1719908539764" duration="1960000" />
+      <workItem from="1719908539764" duration="2254000" />
     </task>
     <servers />
   </component>
