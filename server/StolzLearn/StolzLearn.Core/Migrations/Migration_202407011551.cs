@@ -30,10 +30,12 @@ public class Migration_202407011551 : Migration
             .WithColumn("date_create").AsDateTimeOffset().NotNullable().WithDefault(SystemMethods.CurrentDateTimeOffset);
 
         Create.Table("answer")
-            .WithColumn("question_id").AsGuid().NotNullable().PrimaryKey().ForeignKey("question", "id")
-            .WithColumn("questionare_id").AsGuid().NotNullable().PrimaryKey().ForeignKey("questionnaire", "id")
+            .WithColumn("id").AsGuid().NotNullable().PrimaryKey().WithDefault(SystemMethods.NewSequentialId)
+            .WithColumn("question_id").AsGuid().NotNullable().ForeignKey("question", "id")
+            .WithColumn("questionnaire_id").AsGuid().NotNullable().ForeignKey("questionnaire", "id")
             .WithColumn("given_answer").AsString().NotNullable()
-            .WithColumn("is_correct").AsBoolean().NotNullable();
+            .WithColumn("is_correct").AsBoolean().NotNullable()
+            .WithColumn("date_create").AsDateTimeOffset().NotNullable().WithDefault(SystemMethods.CurrentDateTimeOffset);
     }
 
     public override void Down()

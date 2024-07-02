@@ -1,9 +1,11 @@
 using System.Reflection;
+using Dapper;
 using FluentMigrator.Runner;
 using FluentMigrator.Runner.Conventions;
 using StolzLearn.Core.Configuration;
 using StolzLearn.Core.Extensions;
 using StolzLearn.Core.HealthChecks;
+using StolzLearn.Core.Postgres;
 using StolzLearn.Core.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,10 @@ builder.Services.AddControllers();
 
 //configurations
 builder.Services.AddAndValidateOptions<PostgresqlOptions>(PostgresqlOptions.Position);
+
+//database
+DefaultTypeMap.MatchNamesWithUnderscores = true;
+builder.Services.AddScoped<IDbConnection, DbConnection>();
 
 //repositories
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();

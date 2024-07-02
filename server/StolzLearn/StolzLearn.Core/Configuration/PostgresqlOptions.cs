@@ -16,5 +16,6 @@ public record PostgresqlOptions
         Password = {Password};
         Host = {Host};
         Port = {Port};
-        Database = {Database};";
+        Database = {Database};
+        SearchPath = stolz_learn_core, public";
 }
