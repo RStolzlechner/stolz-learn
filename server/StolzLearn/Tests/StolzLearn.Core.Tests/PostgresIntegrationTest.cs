@@ -37,12 +37,12 @@ public class PostgresIntegrationTest
         _scope.Dispose();
     }
 
-    protected Task<Guid> InsertCourse(string name = "a course")
+    protected Task<Guid> InsertCourse(string name = "a course", bool isArchived = false)
     {
         var number = Guid.NewGuid().ToString();
         
-        var sql = "INSERT INTO course (name, number) VALUES (@name, @number) RETURNING  id";
-        return DbConnection.QuerySingleAsync<Guid>(sql, new DynamicParameters(new { name, number }));
+        var sql = "INSERT INTO course (name, number, in_archive) VALUES (@name, @number, @isArchived) RETURNING  id";
+        return DbConnection.QuerySingleAsync<Guid>(sql, new DynamicParameters(new { name, number, isArchived }));
     }
     
     protected Task<Guid> InsertQuestion(Guid courseId, string question = "a question", string correctAnswer = "a correct answer")

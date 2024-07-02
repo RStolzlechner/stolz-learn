@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StolzLearn.Core.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9cf08f9062eb444eb418dcbed9c4c5ef9cf76e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6d2f8363023c671877e5960150a4368926df3aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("StolzLearn.Core.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StolzLearn.Core.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
