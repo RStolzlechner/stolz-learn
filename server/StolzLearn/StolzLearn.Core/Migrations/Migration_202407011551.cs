@@ -19,19 +19,19 @@ public class Migration_202407011551 : Migration
             .WithColumn("id").AsGuid().NotNullable().PrimaryKey().WithDefault(SystemMethods.NewSequentialId)
             .WithColumn("course_id").AsGuid().NotNullable().ForeignKey("course", "id")
             .WithColumn("number").AsInt32().NotNullable().Identity()
-            .WithColumn("question").AsString().NotNullable()
+            .WithColumn("question_text").AsString().NotNullable()
             .WithColumn("correct_answer").AsString().NotNullable()
             .WithColumn("date_create").AsDateTimeOffset().NotNullable().WithDefault(SystemMethods.CurrentDateTimeOffset)
             .WithColumn("deleted").AsBoolean().WithDefaultValue(false);
 
-        Create.Table("questionare")
+        Create.Table("questionnaire")
             .WithColumn("id").AsGuid().NotNullable().PrimaryKey().WithDefault(SystemMethods.NewSequentialId)
             .WithColumn("course_id").AsGuid().NotNullable().ForeignKey("course", "id")
             .WithColumn("date_create").AsDateTimeOffset().NotNullable().WithDefault(SystemMethods.CurrentDateTimeOffset);
 
         Create.Table("answer")
             .WithColumn("question_id").AsGuid().NotNullable().PrimaryKey().ForeignKey("question", "id")
-            .WithColumn("questionare_id").AsGuid().NotNullable().PrimaryKey().ForeignKey("questionare", "id")
+            .WithColumn("questionare_id").AsGuid().NotNullable().PrimaryKey().ForeignKey("questionnaire", "id")
             .WithColumn("given_answer").AsString().NotNullable()
             .WithColumn("is_correct").AsBoolean().NotNullable();
     }

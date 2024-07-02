@@ -10,10 +10,16 @@
       <user-name>stolz_learn_core_app</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database">
-            <name qname="@" />
-            <name qname="stolz_learn_core" />
-            <node kind="schema" qname="@" />
+          <node negative="1">
+            <node kind="database" qname="@">
+              <node kind="schema" qname="@" />
+            </node>
+            <node kind="database" qname="stolz_learn_core">
+              <node kind="schema">
+                <name qname="@" />
+                <name qname="stolz_learn_core" />
+              </node>
+            </node>
           </node>
         </introspection-scope>
       </schema-mapping>
