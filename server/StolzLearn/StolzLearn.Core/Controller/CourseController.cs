@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using Serilog;
 using StolzLearn.Core.Models;
 using StolzLearn.Core.Services;
 using StolzLearn.Core.SignalR;
@@ -10,7 +11,7 @@ namespace StolzLearn.Core.Controller;
 public class CourseController(
     ICourseService courseService, 
     IHubContext<CoreHub, ICoreHub> hub,
-    IStatisticService statisticService) : ControllerBase
+    IStatisticService statisticService) : CoreControllerBase
 {
     [HttpGet("statistic/{id:guid}")]
     public async Task<IActionResult> GetCourseStatistic(Guid id)
@@ -37,8 +38,10 @@ public class CourseController(
         var idList = ids.ToList();
         var courses = await courseService.SelectByIds(idList);
 
-        if (courses.Count() != idList.Count())
-            return BadRequest("Not all ids found in database");
+        if (courses.Count() != idList.Count)
+        {
+            Log.Warning("Not all ids found in database");
+        }
 
         return Ok(courses);
     }
@@ -48,12 +51,22 @@ public class CourseController(
     {
         var course = (await courseService.SelectByIds([id])).FirstOrDefault();
         if(course == null)
+        {
             return BadRequest("Given id not found in database");
+        }
         if (course.InArchive)
             return Ok();
         
         course.InArchive = true;
-        await courseService.Update(course);
+
+        try
+        {
+            await courseService.Update(course);   
+        }
+        catch(Exception e)
+        {
+            return InternalError(e.Message);
+        }
 
         await hub.Clients.All.OnCourseChanged(id);
         return Ok();
@@ -65,11 +78,20 @@ public class CourseController(
         var course = (await courseService.SelectByIds([id])).FirstOrDefault();
         if(course == null)
             return BadRequest("Given id not found in database");
+        
         if (!course.InArchive)
             return Ok();
         
         course.InArchive = false;
-        await courseService.Update(course);
+
+        try
+        {
+            await courseService.Update(course);   
+        }
+        catch(Exception e)
+        {
+            return InternalError(e.Message);
+        }
 
         await hub.Clients.All.OnCourseChanged(id);
         return Ok();
@@ -92,7 +114,7 @@ public class CourseController(
         } 
         catch (Exception e)
         {
-            return BadRequest(e.Message);
+            return InternalError(e.Message);
         }
     }
     
@@ -107,8 +129,15 @@ public class CourseController(
         var existingCourse = (await courseService.SelectByIds([course.Id])).FirstOrDefault();
         if(existingCourse == null)
             return BadRequest("Given id not found in database");
-        
-        await courseService.Update(course);
+
+        try
+        {
+            await courseService.Update(course);   
+        }
+        catch(Exception e)
+        {
+            return InternalError(e.Message);
+        }
 
         await hub.Clients.All.OnCourseChanged(course.Id);
         return Ok();

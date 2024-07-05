@@ -9,8 +9,7 @@
 
 2. **[POST] /course/get-by-ids**
     - **Body:** List of IDs
-    - **BadRequest:** If any ID is not found in the database
-    - **Returns:** List of course objects
+    - **Returns:** List of found course objects
     - **Notes:** Fetch course objects
 
 3. **[PUT] /course/archive/{id}**
@@ -68,17 +67,16 @@
     - **Body:** Question object
     - **BadRequest:** If the answer or question is empty
     - **Hub:** `onCourseChanged(id)`
-    - **Returns:** OK if success
+    - **Returns:** 200 with ID if OK
 
 12. **[PUT] /question**
     - **Body:** Question object
-    - **BadRequest:** If not found in the database
+    - **BadRequest:** If the answer or question is empty
     - **Hub:** `onCourseChanged(id)`
     - **Returns:** OK if success
 
-13. **[PUT] /question/delete** (Sets deletion flag)
-    - **Body:** Question object
-    - **BadRequest:** If not found in the database
+13. **[PUT] /question/soft-delete** (Sets deletion flag)
+    - **Body:** id of the question
+    - **BadRequest:** If the question is not present
     - **Hub:** `onCourseChanged(id)`
     - **Returns:** OK if success
-    - **Notes:** Consider renaming the endpoint to `question/soft-delete` for clarity.

@@ -120,3 +120,13 @@
 /home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/ref/StolzLearn.Core.Tests.dll
 /home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Castle.Core.dll
 /home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Moq.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.AspNetCore.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.Extensions.Hosting.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.Extensions.Logging.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.Formatting.Compact.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.Settings.Configuration.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.Sinks.Console.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
+/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/Serilog.Sinks.File.dll
