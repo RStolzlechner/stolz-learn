@@ -42,7 +42,7 @@ builder.Services.AddScoped<IQuestionnaireRepository, QuestionnaireRepository>();
 //services
 builder.Services.AddScoped<IAnswerService, AnswerService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
-builder.Services.AddScoped<ICourseStatisticService, CourseStatisticService>();
+builder.Services.AddScoped<IStatisticService, StatisticService>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
 builder.Services.AddScoped<IQuestionnaireService, QuestionnaireService>();
 

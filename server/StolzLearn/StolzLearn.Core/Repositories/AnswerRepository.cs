@@ -13,4 +13,13 @@ public class AnswerRepository(IDbConnection connection) : IAnswerRepository
 
         return connection.QueryAsync<Answer>(sql, p);
     }
+
+    public Task<IEnumerable<Answer>> SelectByQuestionIds(IEnumerable<Guid> questionIds)
+    {
+        var idList = questionIds.ToList();
+        var sql = $@"SELECT a.* FROM answer a WHERE a.question_id = ANY(@idList) ORDER BY a.date_create";
+        var p = new DynamicParameters(new { idList });
+        
+        return connection.QueryAsync<Answer>(sql, p);
+    }
 }

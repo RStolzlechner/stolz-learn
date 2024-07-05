@@ -6,12 +6,12 @@ using StolzLearn.Core.Services;
 
 namespace StolzLearn.Core.Tests.Services;
 
-public class CourseStatisticServiceTests
+public class StatisticServiceTests
 {
     private Mock<IQuestionRepository> questionRepoMock = null!;
     private Mock<IAnswerRepository> answerRepoMock = null!;
 
-    private ICourseStatisticService sut = null!;
+    private IStatisticService sut = null!;
 
     [SetUp]
     public void Setup()
@@ -19,7 +19,7 @@ public class CourseStatisticServiceTests
         questionRepoMock = new Mock<IQuestionRepository>();
         answerRepoMock = new Mock<IAnswerRepository>();
         
-        sut = new CourseStatisticService(questionRepoMock.Object, answerRepoMock.Object);
+        sut = new StatisticService(questionRepoMock.Object, answerRepoMock.Object);
     }
 
     [Test]

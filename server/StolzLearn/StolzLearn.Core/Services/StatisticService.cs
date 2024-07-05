@@ -3,7 +3,7 @@ using StolzLearn.Core.Repositories;
 
 namespace StolzLearn.Core.Services;
 
-public class CourseStatisticService(IQuestionRepository questionRepository, IAnswerRepository answerRepository) : ICourseStatisticService
+public class StatisticService(IQuestionRepository questionRepository, IAnswerRepository answerRepository) : IStatisticService
 {
     public async Task<CourseStatistic> SelectByCourseId(Guid courseId)
     {
@@ -52,5 +52,36 @@ public class CourseStatisticService(IQuestionRepository questionRepository, IAns
         }
 
         return statistic;
+    }
+
+    public async Task<QuestionnaireStatistic> SelectQuestionnaireStatistics(IEnumerable<Guid> questionIds)
+    {
+        var answers = await answerRepository.SelectByQuestionIds(questionIds.Distinct());
+        
+        var answerQuestionDictionary = answers
+            .GroupBy(a => a.QuestionId)
+            .ToDictionary(
+                group => group.Key, 
+                group => group.ToList());
+
+        var statistics = new QuestionnaireStatistic();
+        
+        foreach (var answer in answerQuestionDictionary)
+        {
+            var questionId = answer.Key;
+            var allAnswers = answer.Value.Count;
+            var correctAnswers = answer.Value.Count(a => a.IsCorrect);
+            
+            var questionDataPoint = new QuestionDataPoint()
+            {
+                QuestionId = questionId,
+                TotalAnswerCnt = allAnswers,
+                CorrectAnswerCnt = correctAnswers
+            };
+            
+            statistics.Questions.Add(questionDataPoint);
+        }
+
+        return statistics;
     }
 }

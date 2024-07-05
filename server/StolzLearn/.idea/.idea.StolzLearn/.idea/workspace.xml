@@ -9,11 +9,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Controller/CourseController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/SignalR/CoreHub.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/SignalR/ICoreHub.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Controller/QuestionnaireController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StolzLearn.Core/Models/Statistic/QuestionnaireStatistic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documentation/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../documentation/api.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Controller/CourseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Controller/CourseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Repositories/AnswerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/AnswerRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Repositories/IAnswerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/IAnswerRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Services/CourseStatisticService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/StatisticService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Services/ICourseStatisticService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Services/IStatisticService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/Services/CourseStatisticServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/Services/StatisticServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_StolzLearn.Core.Tests" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_StolzLearn.Core.Tests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +140,8 @@
       <workItem from="1719838065283" duration="4825000" />
       <workItem from="1719842917771" duration="903000" />
       <workItem from="1719908539764" duration="12988000" />
-      <workItem from="1719939415473" duration="5136000" />
+      <workItem from="1719939415473" duration="5421000" />
+      <workItem from="1720172282204" duration="2297000" />
     </task>
     <servers />
   </component>

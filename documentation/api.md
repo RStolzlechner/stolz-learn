@@ -44,8 +44,9 @@
 ### Questionnaire Management
 
 8. **[POST] /questionnaire**
-    - **Body:** Array of QuestionIds and RightWrongFlags
-    - **BadRequest:** If any ID is not found in the database
+    - **Body:** Questionnaire Object (courseId with answer array)
+    - **BadRequest:** If courseId or any questionID is not found in the database
+    - **BadRequest:** If a answer string is empty
     - **Hub:** `onCourseChanged(id)`
     - **Returns:** Questionnaire statistics if OK
     - **Notes:** Consider returning the course status if it changes due to the questionnaire completion.

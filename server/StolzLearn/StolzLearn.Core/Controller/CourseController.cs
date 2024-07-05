@@ -10,7 +10,7 @@ namespace StolzLearn.Core.Controller;
 public class CourseController(
     ICourseService courseService, 
     IHubContext<CoreHub, ICoreHub> hub,
-    ICourseStatisticService courseStatisticService) : ControllerBase
+    IStatisticService statisticService) : ControllerBase
 {
     [HttpGet("statistic/{id:guid}")]
     public async Task<IActionResult> GetCourseStatistic(Guid id)
@@ -19,7 +19,7 @@ public class CourseController(
         if(course == null)
             return BadRequest("Given id not found in database");
 
-        var statistic = await courseStatisticService.SelectByCourseId(id);
+        var statistic = await statisticService.SelectByCourseId(id);
         return Ok(statistic);
     }
     
