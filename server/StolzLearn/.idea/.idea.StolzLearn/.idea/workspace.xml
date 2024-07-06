@@ -8,7 +8,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="" />
+    <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-Black.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-BlackItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-BoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-ExtraBold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-ExtraBoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-Light.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-LightItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-Medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-MediumItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-RegularItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-Thin.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/CreatoDisplay-ThinItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/public/fonts/SIL OPEN FONT LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,37 +59,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Executable.StolzLearn.Core: migrate.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.StolzLearn.Core.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.StolzLearn.Core: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.StolzLearn.Core: migrate.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Project.StolzLearn.Core: migrate.executor&quot;: &quot;Run&quot;,
-    &quot;4a90d6ff-d259-48cb-8bf7-a305adfc5b45.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;4-first-features&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ricardo/src/stolz-learn&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.DiagramsNet.Preview&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Executable.StolzLearn.Core: migrate.executor": "Run",
+    ".NET Launch Settings Profile.StolzLearn.Core.executor": "Debug",
+    ".NET Launch Settings Profile.StolzLearn.Core: http.executor": "Run",
+    ".NET Launch Settings Profile.StolzLearn.Core: migrate.executor": "Debug",
+    ".NET Project.StolzLearn.Core: migrate.executor": "Run",
+    "4a90d6ff-d259-48cb-8bf7-a305adfc5b45.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "4-first-features",
+    "last_opened_file_path": "/home/ricardo/src/stolz-learn",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Settings.DiagramsNet.Preview",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora_aws&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora_aws",
+      "postgresql"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
-      &quot;/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
-      &quot;/home/ricardo/.local/share/Symbols/src&quot;
+    "rider.external.source.directories": [
+      "/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/home/ricardo/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.StolzLearn.Core">
     <configuration name="StolzLearn.Core: migrate" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/StolzLearn.Core/bin/Debug/net8.0/StolzLearn.Core" />
@@ -126,7 +145,7 @@
       <workItem from="1719842917771" duration="903000" />
       <workItem from="1719908539764" duration="12988000" />
       <workItem from="1719939415473" duration="5421000" />
-      <workItem from="1720172282204" duration="7237000" />
+      <workItem from="1720172282204" duration="7871000" />
     </task>
     <servers />
   </component>

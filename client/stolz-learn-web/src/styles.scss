@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+//@import './app/styles/index.scss';
+
+@import "app/styles/variables/colors";
+@import "app/styles/variables/distances";
+
+@import "app/styles/font-face/creato-display";
+
+@import "app/styles/classes/flex";
+@import "app/styles/classes/text";
+@import "app/styles/classes/distances";
+
+
+body {
+  font-family: CreatoDisplay, sans-serif;
+  @extend .text-regular;
+}
+
+
+
+
+
+
