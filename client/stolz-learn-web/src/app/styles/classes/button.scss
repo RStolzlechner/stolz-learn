@@ -1,0 +1,55 @@
+button {
+  @extend .text-action;
+  @extend .p-2;
+  @extend .pl-3;
+  @extend .pr-3;
+
+  display: inline-flex; /* Use flexbox for easy centering */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+
+  border: 0.125rem solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: 0.5rem;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    background-color: var(--disabled-gray);
+    border-color: var(--disabled-gray);
+    color: var(--text-color-secondary);
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.button-primary {
+  @extend .bg-primary;
+  border-color: var(--primary);
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.5);
+  }
+}
+
+.button-secondary {
+  background: var(--surface-1);
+  border-color: var(--text-color-main);
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.5);
+  }
+}
+
+.button-danger {
+  @extend .bg-danger;
+  border-color: var(--danger);
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(var(--danger-rgb), 0.5);
+  }
+}
