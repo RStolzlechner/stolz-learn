@@ -1,6 +1,12 @@
 <!--Header-->
 <div class="header">
-  <div class="header-icon"><img src="icons/logo.svg" alt="RL Logo" class="w-6" (click)="routeToHome()" (keydown.enter)="routeToHome()" tabindex="0"></div>
+  <div class="header-icon">
+    <img src="icons/logo.svg"
+         alt="RL Logo"
+         class="w-6"
+         (click)="routeToHome()" (keydown.enter)="routeToHome()"
+         tabindex="0">
+  </div>
   <div class="ml-5 w-percent-90 p-3">
     @for (breadcrumb of breadcrumbValues(); track breadcrumb; let index = $index) {
       <span>{{breadcrumb}}</span>

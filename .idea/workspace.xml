@@ -5,31 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="238af093-b93b-4f28-a4c4-254dc2ab2bb4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-Black.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-BlackItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-Bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-BoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-ExtraBold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-ExtraBoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-Light.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-LightItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-MediumItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-Regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-RegularItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-Thin.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/CreatoDisplay-ThinItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/public/fonts/SIL OPEN FONT LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/classes/distances.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/classes/flex.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/classes/text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/font-face/creato-display.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/variables/colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/variables/distances.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/classes/header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/icons/icons/logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/public/logo_1024x1024.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/public/logo_128x128.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/public/logo_256x256.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/public/logo_512x512.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/public/logo_64x64.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/classes/distances.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/classes/distances.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/stolz-learn-web/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/stolz-learn-web/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/StolzLearn/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/StolzLearn/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +39,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;4-first-features&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ricardo/src/stolz-learn/client/stolz-learn-web/public/fonts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ricardo/src/stolz-learn/client/stolz-learn-web/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -63,9 +51,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/stolz-learn-web/public" />
       <recent name="$PROJECT_DIR$/client/stolz-learn-web/public/fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/icons" />
       <recent name="$PROJECT_DIR$/client/stolz-learn-web/src/app/styles/variables" />
     </key>
   </component>
@@ -84,7 +74,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720242708543</updated>
-      <workItem from="1720242709604" duration="8098000" />
+      <workItem from="1720242709604" duration="8131000" />
+      <workItem from="1720265353246" duration="4751000" />
+      <workItem from="1721733462529" duration="9602000" />
     </task>
     <servers />
   </component>
