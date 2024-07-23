@@ -1,0 +1,23 @@
+.header {
+  @extend .bg-surface-4;
+  @extend .flex;
+  @extend .items-center;
+  @extend .justify-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--l6);
+}
+
+.header-icon {
+  @extend .flex;
+  @extend .items-center;
+  @extend .justify-start;
+  @extend .cursor-pointer;
+  height: var(--l6);
+}
+
+.header-spacer {
+  height: var(--l6);
+}

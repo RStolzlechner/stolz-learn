@@ -1,3 +1,17 @@
+<!--Header-->
+<div class="header">
+  <div class="header-icon"><img src="icons/logo.svg" alt="RL Logo" class="w-6" (click)="routeToHome()" (keydown.enter)="routeToHome()" tabindex="0"></div>
+  <div class="ml-5 w-percent-90 p-3">
+    @for (breadcrumb of breadcrumbValues(); track breadcrumb; let index = $index) {
+      <span>{{breadcrumb}}</span>
+      @if (index !== breadcrumbValues().length - 1) {
+        <span class="ml-2 mr-2">></span>
+      }
+    }
+  </div>
+</div>
+<div class="header-spacer"></div>
+
 <!-- text-header -->
 <div class="text-header">Header</div>
 
@@ -85,5 +99,3 @@
 <div class="mt-8">mt-8</div>
 <div class="mt-9">mt-9</div>
 <div class="mt-10">mt-10</div>
-
-<img src="logo_1024x1024.webp" alt="FALSCH">

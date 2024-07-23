@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 6px;
+      }
+      .cls-1,
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+      .cls-2 {
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <!-- Book cover -->
+  <rect class="cls-1" x="13" y="13" width="74" height="74" />
+  <!-- Book spine lines -->
+  <line class="cls-2" x1="31" y1="13" x2="31" y2="34" />
+  <line class="cls-2" x1="67.77" y1="13" x2="67.77" y2="34" />
+  <!-- Text "SL" in the middle of the book -->
+  <text x="50" y="60" text-anchor="middle" alignment-baseline="middle" font-size="32" font-family="Arial" font-weight="700" fill="#000">SL</text>
+</svg>
