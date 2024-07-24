@@ -32,17 +32,13 @@ button {
   border-color: var(--primary);
 
   &:focus {
-    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.5);
+    box-shadow: 0 0 0 3px rgba(var(--primary), 0.5);
   }
 }
 
 .button-secondary {
   background: var(--surface-1);
   border-color: var(--text-color-main);
-
-  &:focus {
-    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.5);
-  }
 }
 
 .button-danger {
@@ -50,6 +46,6 @@ button {
   border-color: var(--danger);
 
   &:focus {
-    box-shadow: 0 0 0 3px rgba(var(--danger-rgb), 0.5);
+    box-shadow: 0 0 0 3px rgba(var(--danger), 0.5);
   }
 }
