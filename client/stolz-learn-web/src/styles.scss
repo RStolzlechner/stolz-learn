@@ -16,6 +16,7 @@
 @import "app/styles/classes/input";
 @import "app/styles/classes/header";
 @import "app/styles/classes/dialog";
+@import "app/styles/classes/status-messages";
 
 @import "app/styles/icons/icons";
 
@@ -24,9 +25,3 @@ body {
   @extend .bg-surface-1;
   @extend .text-regular;
 }
-
-
-
-
-
-

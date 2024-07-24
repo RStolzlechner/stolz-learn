@@ -10,7 +10,7 @@ import { ConfirmationService } from '../services/confirmation.service';
 import { ConfirmationLabels } from '../translations/confirmation.translations';
 
 @Component({
-  selector: 'app-confirmation',
+  selector: 'app-confirmation-dialog',
   template: `<dialog #confirmDialog (keydown.escape)="close()" tabindex="1">
     @if (confirmationData(); as confirmationData) {
       <div>{{ confirmationData.text }}</div>
