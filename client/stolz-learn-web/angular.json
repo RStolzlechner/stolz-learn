@@ -72,7 +72,8 @@
               "buildTarget": "stolz-learn-web:build:production"
             },
             "development": {
-              "buildTarget": "stolz-learn-web:build:development"
+              "buildTarget": "stolz-learn-web:build:development",
+              "proxyConfig": "proxy.local.conf.json"
             }
           },
           "defaultConfiguration": "development"

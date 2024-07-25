@@ -4,6 +4,7 @@ import { ConfirmationComponent } from './ui/confirmation.component';
 import { ConfirmationService } from './services/confirmation.service';
 import { StatusMessageComponent } from './ui/status-message.component';
 import { StatusMessageService } from './services/status-message.service';
+import { TestHttpService } from './services/http/test-http.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { StatusMessageService } from './services/status-message.service';
 export class AppComponent {
   private readonly confirmationService = inject(ConfirmationService);
   private readonly statusMessageService = inject(StatusMessageService);
+  private readonly testHttpService = inject(TestHttpService);
 
   protected breadcrumbValues = signal([
     'Breadcrumb not implemented',
@@ -59,5 +61,9 @@ export class AppComponent {
       message: 'This is an error message',
       type: 'error',
     });
+  }
+
+  testApi() {
+    this.testHttpService.test().subscribe((r) => console.log(r));
   }
 }
