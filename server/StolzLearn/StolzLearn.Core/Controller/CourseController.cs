@@ -97,7 +97,7 @@ public class CourseController(
         return Ok();
     }
     
-    [HttpPost("create")]
+    [HttpPost()]
     public async Task<IActionResult> CreateCourse([FromBody] Course course)
     {
         if(string.IsNullOrEmpty(course.Name))
@@ -118,7 +118,7 @@ public class CourseController(
         }
     }
     
-    [HttpPut("update")]
+    [HttpPut()]
     public async Task<IActionResult> UpdateCourse([FromBody] Course course)
     {
         if(string.IsNullOrEmpty(course.Name))
