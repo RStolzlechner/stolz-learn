@@ -5,6 +5,8 @@ import { ConfirmationService } from './services/confirmation.service';
 import { StatusMessageComponent } from './ui/status-message.component';
 import { StatusMessageService } from './services/status-message.service';
 import { TestHttpService } from './services/http/test-http.service';
+import { CourseService } from './services/course.service';
+import { GUID } from './types/guid.type';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +19,7 @@ export class AppComponent {
   private readonly confirmationService = inject(ConfirmationService);
   private readonly statusMessageService = inject(StatusMessageService);
   private readonly testHttpService = inject(TestHttpService);
+  private readonly courseService = inject(CourseService);
 
   protected breadcrumbValues = signal([
     'Breadcrumb not implemented',
@@ -63,7 +66,11 @@ export class AppComponent {
     });
   }
 
-  testApi() {
+  async testApi() {
     this.testHttpService.test().subscribe((r) => console.log(r));
+
+    await this.courseService.getCourseStatistic(
+      GUID('23fbd8c0-38a0-11ef-873d-0242ac120002'),
+    );
   }
 }

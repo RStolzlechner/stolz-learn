@@ -16,7 +16,7 @@ export class QuestionHttpService {
 
   public selectByIds(ids: GUID[]) {
     const url = `${httpUrl}question/get-by-ids`;
-    return this.httpClient.post<GUID[]>(url, ids);
+    return this.httpClient.post<Question[]>(url, ids);
   }
 
   public insert(question: Question) {

@@ -21,10 +21,10 @@ import { ConfirmationLabels } from '../translations/confirmation.translations';
           [ngClass]="{ 'button-danger': confirmationData.isDanger }"
           (click)="confirm()"
         >
-          {{ ConfirmationLabels.YES }}
+          {{ ConfirmationLabels.yes }}
         </button>
         <button class="button-secondary w-6 ml-3" (click)="close()">
-          {{ ConfirmationLabels.NO }}
+          {{ ConfirmationLabels.no }}
         </button>
       </div>
     }

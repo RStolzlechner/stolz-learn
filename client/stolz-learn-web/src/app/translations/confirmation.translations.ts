@@ -1,8 +1,8 @@
-const NO = $localize`:confirmation@@NO:No`;
+const no = $localize`:confirmation@@NO:No`;
 
-const YES = $localize`:confirmation@@YES:Yes`;
+const yes = $localize`:confirmation@@YES:Yes`;
 
 export const ConfirmationLabels = {
-  NO,
-  YES,
+  no,
+  yes,
 };
