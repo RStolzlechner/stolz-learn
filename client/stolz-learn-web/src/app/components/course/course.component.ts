@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RoutingService } from '../../services/routing.service';
+import { BreadcrumbLabels } from '../../translations/breadcrumb.translations';
 
 @Component({
   selector: 'app-course',
@@ -7,4 +9,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
 })
-export class CourseComponent {}
+export class CourseComponent implements OnInit {
+  private readonly routingService = inject(RoutingService);
+
+  ngOnInit() {
+    this.routingService.setBreadCrumb(2, BreadcrumbLabels.course);
+  }
+}

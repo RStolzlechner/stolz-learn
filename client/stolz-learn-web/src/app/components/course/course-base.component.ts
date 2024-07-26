@@ -18,6 +18,8 @@ export class CourseBaseComponent implements OnInit, OnDestroy {
   private routeSubscription!: Subscription;
 
   ngOnInit(): void {
+    this.routingService.setBreadCrumb(1, 'TODO determine course name');
+
     this.routeSubscription = this.route.paramMap.subscribe((pm) => {
       const courseId = pm.get(CoursesRoutes.courseId);
       this.routingService.setCourseId(courseId);

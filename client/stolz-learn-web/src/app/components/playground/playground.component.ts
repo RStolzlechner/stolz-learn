@@ -1,10 +1,12 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GUID } from '../../types/guid.type';
 import { ConfirmationService } from '../../services/confirmation.service';
 import { StatusMessageService } from '../../services/status-message.service';
 import { TestHttpService } from '../../services/http/test-http.service';
 import { CourseService } from '../../services/course.service';
+import { RoutingService } from '../../services/routing.service';
+import { BreadcrumbLabels } from '../../translations/breadcrumb.translations';
 
 @Component({
   selector: 'app-playground',
@@ -146,11 +148,16 @@ import { CourseService } from '../../services/course.service';
   standalone: true,
   imports: [CommonModule],
 })
-export class PlaygroundComponent {
+export class PlaygroundComponent implements OnInit {
   private readonly confirmationService = inject(ConfirmationService);
   private readonly statusMessageService = inject(StatusMessageService);
   private readonly testHttpService = inject(TestHttpService);
   private readonly courseService = inject(CourseService);
+  private readonly routingService = inject(RoutingService);
+
+  ngOnInit() {
+    this.routingService.setBreadCrumb(0, BreadcrumbLabels.playground);
+  }
 
   openConfirmation() {
     this.confirmationService.open({

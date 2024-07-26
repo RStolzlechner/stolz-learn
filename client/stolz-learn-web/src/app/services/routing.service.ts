@@ -1,4 +1,4 @@
-import { inject, Injectable, signal } from '@angular/core';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   BaseRoutes,
@@ -8,23 +8,44 @@ import {
   QuestionRoutes,
 } from '../app.routes';
 import { GUID } from '../types/guid.type';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class RoutingService {
   private readonly router = inject(Router);
 
-  //region ids
+  //region course id
   private readonly _courseId = signal<GUID | undefined>(undefined);
   public courseId = this._courseId.asReadonly();
-  //endregion
 
-  //region setters
   public setCourseId(courseId: string | null) {
     if (!courseId) {
       this._courseId.set(undefined);
       return;
     }
     this._courseId.set(GUID(courseId));
+  }
+  //endregion
+
+  //region breadcrumb
+  private readonly _breadcrumb = signal<(string | null)[]>([
+    null,
+    null,
+    null,
+    null,
+  ]);
+  public breadcrumb = computed(() => {
+    const bc = this._breadcrumb.asReadonly()();
+    return bc.filter((c): c is string => !!c);
+  });
+
+  public setBreadCrumb(index: number, text: string) {
+    this._breadcrumb.update((old) => {
+      if (index >= 0 && index < old.length) {
+        old[index] = text;
+      }
+      return [...old];
+    });
   }
   //endregion
 
