@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConfirmationService } from '../../services/confirmation.service';
-import { ConfirmationLabels } from '../../translations/confirmation.translations';
+import { ButtonLabels } from '../../translations/button.translations';
 
 @Component({
   selector: 'app-confirmation-dialog',
@@ -38,7 +38,7 @@ export class ConfirmationComponent {
   private dialog =
     viewChild.required<ElementRef<HTMLDialogElement>>('confirmDialog');
 
-  protected ConfirmationLabels = ConfirmationLabels;
+  protected ConfirmationLabels = ButtonLabels;
 
   protected confirmationData = this.confirmationService.confirmationData;
 

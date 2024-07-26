@@ -8,7 +8,6 @@ import {
   QuestionRoutes,
 } from '../app.routes';
 import { GUID } from '../types/guid.type';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class RoutingService {

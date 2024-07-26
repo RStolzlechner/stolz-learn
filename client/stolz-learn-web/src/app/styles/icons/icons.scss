@@ -17,12 +17,27 @@
   vertical-align: middle;
 }
 
+.icon-times {
+  -webkit-mask: url("icons/times.svg");
+  mask: url("icons/times.svg");
+}
+
 .icon-trash {
-  -webkit-mask: url('icons/trash.svg');
-  mask: url('icons/trash.svg');
+  -webkit-mask: url("icons/trash.svg");
+  mask: url("icons/trash.svg");
 }
 
 .icon-pencil {
-  -webkit-mask: url('icons/pencil.svg');
-  mask: url('icons/pencil.svg');
+  -webkit-mask: url("icons/pencil.svg");
+  mask: url("icons/pencil.svg");
+}
+
+.icon-plus {
+  -webkit-mask: url("icons/plus.svg");
+  mask: url("icons/plus.svg");
+}
+
+.icon-save {
+  -webkit-mask: url("icons/save.svg");
+  mask: url("icons/save.svg");
 }

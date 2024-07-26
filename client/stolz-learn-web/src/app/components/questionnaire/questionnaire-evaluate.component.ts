@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RoutingService } from '../../services/routing.service';
-import { BreadcrumbLabels } from '../../translations/breadcrumb.translations';
 
 @Component({
   selector: 'app-questionnaire-evaluate',

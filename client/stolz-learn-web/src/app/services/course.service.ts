@@ -104,12 +104,15 @@ export class CourseService {
       //don't call server; delete this when signal-r update is implemented
       this._courseIds.update((ids) => [...ids, id]);
       this._courses.update((cs) => [...cs, course]);
+
+      return id;
     } catch (error) {
       console.error(error);
       this.statusMessageService.addMessage({
         message: ErrorMessages.createCourse,
         type: 'error',
       });
+      return undefined;
     }
   }
 

@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ConfirmationComponent } from './components/dialogs/confirmation.component';
 import { StatusMessageComponent } from './components/dialogs/status-message.component';
