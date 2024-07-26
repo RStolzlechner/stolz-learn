@@ -1,4 +1,4 @@
-import { inject, Injectable, signal, Signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { GUID } from '../types/guid.type';
 import { CourseStatisticModel } from '../models/course-statistic.model';
 import { firstValueFrom } from 'rxjs';

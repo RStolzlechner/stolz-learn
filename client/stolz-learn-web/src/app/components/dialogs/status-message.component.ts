@@ -1,6 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StatusMessageService } from '../services/status-message.service';
+import { StatusMessageService } from '../../services/status-message.service';
 
 @Component({
   selector: 'app-status-message',

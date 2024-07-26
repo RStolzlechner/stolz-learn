@@ -1,12 +1,7 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ConfirmationComponent } from './ui/confirmation.component';
-import { ConfirmationService } from './services/confirmation.service';
-import { StatusMessageComponent } from './ui/status-message.component';
-import { StatusMessageService } from './services/status-message.service';
-import { TestHttpService } from './services/http/test-http.service';
-import { CourseService } from './services/course.service';
-import { GUID } from './types/guid.type';
+import { ConfirmationComponent } from './components/dialogs/confirmation.component';
+import { StatusMessageComponent } from './components/dialogs/status-message.component';
 
 @Component({
   selector: 'app-root',
@@ -16,11 +11,6 @@ import { GUID } from './types/guid.type';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  private readonly confirmationService = inject(ConfirmationService);
-  private readonly statusMessageService = inject(StatusMessageService);
-  private readonly testHttpService = inject(TestHttpService);
-  private readonly courseService = inject(CourseService);
-
   protected breadcrumbValues = signal([
     'Breadcrumb not implemented',
     'Use routing service after routing is done',
@@ -28,49 +18,5 @@ export class AppComponent {
 
   routeToHome() {
     console.warn('Route To Home currently not implemented');
-  }
-
-  openConfirmation() {
-    this.confirmationService.open({
-      text: 'This is only a test',
-      isDanger: true,
-      action: () => console.log('confirmed'),
-    });
-  }
-
-  infoMessage() {
-    this.statusMessageService.addMessage({
-      message: 'This is an info message',
-      type: 'info',
-    });
-  }
-
-  successMessage() {
-    this.statusMessageService.addMessage({
-      message: 'This is an success message',
-      type: 'success',
-    });
-  }
-
-  warningMessage() {
-    this.statusMessageService.addMessage({
-      message: 'This is an warning message',
-      type: 'warning',
-    });
-  }
-
-  errorMessage() {
-    this.statusMessageService.addMessage({
-      message: 'This is an error message',
-      type: 'error',
-    });
-  }
-
-  async testApi() {
-    this.testHttpService.test().subscribe((r) => console.log(r));
-
-    await this.courseService.getCourseStatistic(
-      GUID('23fbd8c0-38a0-11ef-873d-0242ac120002'),
-    );
   }
 }

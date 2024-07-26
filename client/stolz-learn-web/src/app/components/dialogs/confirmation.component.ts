@@ -6,8 +6,8 @@ import {
   viewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConfirmationService } from '../services/confirmation.service';
-import { ConfirmationLabels } from '../translations/confirmation.translations';
+import { ConfirmationService } from '../../services/confirmation.service';
+import { ConfirmationLabels } from '../../translations/confirmation.translations';
 
 @Component({
   selector: 'app-confirmation-dialog',
