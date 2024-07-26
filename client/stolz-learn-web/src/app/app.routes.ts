@@ -45,69 +45,103 @@ function numberMatcher(path: string): UrlMatcher {
 }
 //endregion
 
+//region enums
+export enum BaseRoutes {
+  playground = 'playground',
+  courses = 'courses',
+}
+
+export enum CoursesRoutes {
+  overview = 'overview',
+  archive = 'archive',
+  new = 'new',
+  courseId = 'course-id',
+}
+
+export enum CourseRoutes {
+  course = 'course',
+  edit = 'course-edit',
+  question = 'question',
+  questionnaire = 'questionnaire',
+}
+
+export enum QuestionRoutes {
+  overview = 'overview',
+  questionId = 'question-id',
+  new = 'new',
+}
+
+export enum QuestionnaireRoutes {
+  questionnaireId = 'questionnaire-id',
+  stepId = 'step-id',
+  evaluate = 'evaluate',
+  submit = 'submit',
+}
+//endregion
+
 //region child routes
 const questionRoutes: Routes = [
-  { path: 'overview', component: QuestionOverviewComponent },
+  { path: QuestionRoutes.overview, component: QuestionOverviewComponent },
   {
-    matcher: guidMatcher('question-id'),
+    matcher: guidMatcher(QuestionRoutes.questionId),
     component: QuestionEditComponent,
   },
-  { path: 'new', component: QuestionNewComponent },
-  { path: '**', redirectTo: 'overview' },
+  { path: QuestionRoutes.new, component: QuestionNewComponent },
 ];
 
 const questionnaireRoutes: Routes = [
   {
-    matcher: guidMatcher('questionnaire-id'),
+    matcher: guidMatcher(QuestionnaireRoutes.questionnaireId),
     component: QuestionnaireStatisticsComponent,
   },
   {
-    matcher: numberMatcher('step-id'),
+    matcher: numberMatcher(QuestionnaireRoutes.stepId),
     children: [
-      { path: 'submit', component: QuestionnaireSubmitComponent },
       {
-        path: 'evaluate',
+        path: QuestionnaireRoutes.submit,
+        component: QuestionnaireSubmitComponent,
+      },
+      {
+        path: QuestionnaireRoutes.evaluate,
         component: QuestionnaireEvaluateComponent,
       },
-      { path: '**', redirectTo: 'submit' },
     ],
   },
-  { path: '**', redirectTo: '' },
 ];
 
 const courseRoutes: Routes = [
-  { path: 'course', component: CourseComponent },
-  { path: 'course-edit', component: CourseEditComponent },
+  { path: CourseRoutes.course, component: CourseComponent },
+  { path: CourseRoutes.edit, component: CourseEditComponent },
   {
-    path: 'question',
+    path: CourseRoutes.question,
     component: QuestionBaseComponent,
     children: questionRoutes,
   },
   {
-    path: 'questionnaire',
+    path: CourseRoutes.questionnaire,
     component: QuestionnaireBaseComponent,
     children: questionnaireRoutes,
   },
-  { path: '**', redirectTo: 'course' },
+  { path: '**', redirectTo: CourseRoutes.course },
 ];
 //endregion
 
 export const routes: Routes = [
   {
-    path: 'courses',
+    path: BaseRoutes.courses,
     component: CoursesBaseComponent,
     children: [
-      { path: 'overview', component: CoursesOverviewComponent },
-      { path: 'archive', component: CoursesArchiveComponent },
-      { path: 'new', component: CoursesNewComponent },
+      { path: CoursesRoutes.overview, component: CoursesOverviewComponent },
+      { path: CoursesRoutes.archive, component: CoursesArchiveComponent },
+      { path: CoursesRoutes.new, component: CoursesNewComponent },
       {
-        matcher: guidMatcher('course-id'),
+        matcher: guidMatcher(CoursesRoutes.courseId),
         component: CourseBaseComponent,
         children: courseRoutes,
       },
-      { path: '**', redirectTo: 'overview' },
+      { path: '**', redirectTo: CoursesRoutes.overview },
     ],
   },
-  { path: 'playground', component: PlaygroundComponent },
-  { path: '**', redirectTo: 'courses' },
+  { path: BaseRoutes.playground, component: PlaygroundComponent },
+  { path: '**', redirectTo: `${BaseRoutes.courses}/${CoursesRoutes.overview}` },
 ];
