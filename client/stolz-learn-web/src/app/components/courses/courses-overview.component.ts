@@ -5,7 +5,7 @@ import { BreadcrumbLabels } from '../../translations/breadcrumb.translations';
 import { ButtonLabels } from '../../translations/button.translations';
 import { CourseService } from '../../services/course.service';
 import { GUID } from '../../types/guid.type';
-import { coursesLabels } from '../../translations/courses.translations';
+import { CoursesLabels } from '../../translations/courses.translations';
 
 @Component({
   selector: 'app-courses-overview',
@@ -42,7 +42,7 @@ export class CoursesOverviewComponent implements OnInit {
   private readonly routingService = inject(RoutingService);
 
   protected readonly buttonLabels = ButtonLabels;
-  protected readonly coursesLabels = coursesLabels;
+  protected readonly coursesLabels = CoursesLabels;
 
   protected courses = this.courseService.courses;
   protected anyCourses = computed(() => {

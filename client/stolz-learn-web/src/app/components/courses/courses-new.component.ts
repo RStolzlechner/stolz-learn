@@ -19,7 +19,7 @@ import { CourseService } from '../../services/course.service';
 import { DateTime } from '../../types/date-time.type';
 import { GUID } from '../../types/guid.type';
 import { ButtonLabels } from '../../translations/button.translations';
-import { coursesLabels } from '../../translations/courses.translations';
+import { CoursesLabels } from '../../translations/courses.translations';
 
 @Component({
   selector: 'app-courses-archive',
@@ -70,19 +70,18 @@ import { coursesLabels } from '../../translations/courses.translations';
 export class CoursesNewComponent implements OnInit, AfterViewInit {
   private readonly routingService = inject(RoutingService);
   private readonly courseService = inject(CourseService);
+  private readonly formBuilder = inject(FormBuilder);
 
   private numberInput = viewChild.required<ElementRef>('numberInput');
 
   protected courseForm!: FormGroup;
 
   protected buttonLabels = ButtonLabels;
-  protected coursesLabels = coursesLabels;
-
-  constructor(private fb: FormBuilder) {}
+  protected coursesLabels = CoursesLabels;
 
   ngOnInit() {
     this.routingService.setBreadCrumb(1, BreadcrumbLabels.newLabel);
-    this.courseForm = this.fb.group({
+    this.courseForm = this.formBuilder.group({
       number: ['', Validators.required],
       name: ['', Validators.required],
     });
