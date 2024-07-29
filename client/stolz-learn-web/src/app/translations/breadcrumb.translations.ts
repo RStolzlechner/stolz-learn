@@ -1,6 +1,5 @@
 const archive = $localize`:breadcrumb@@archive:Archive`;
 
-const course = $localize`:breadcrumb@@course:Course`;
 const courses = $localize`:breadcrumb@@courses:Courses`;
 
 const edit = $localize`:breadcrumb@@edit:Edit`;
@@ -18,7 +17,6 @@ const statistics = $localize`:breadcrumb@@question:Statistics`;
 
 export const BreadcrumbLabels = {
   archive,
-  course,
   courses,
   edit,
   newLabel,

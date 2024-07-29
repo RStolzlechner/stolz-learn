@@ -1,4 +1,4 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   BaseRoutes,
@@ -8,21 +8,43 @@ import {
   QuestionRoutes,
 } from '../app.routes';
 import { GUID } from '../types/guid.type';
+import { CourseService } from './course.service';
 
 @Injectable({ providedIn: 'root' })
 export class RoutingService {
   private readonly router = inject(Router);
+  private readonly courseService = inject(CourseService);
 
   //region course id
   private readonly _courseId = signal<GUID | undefined>(undefined);
   public courseId = this._courseId.asReadonly();
+  public course = computed(() => {
+    const courseId = this._courseId();
+    if (!courseId) return undefined;
 
-  public setCourseId(courseId: string | null) {
+    const courses = this.courseService.courses();
+    return courses.find((course) => course.id === courseId);
+  });
+
+  constructor() {
+    effect(
+      () => {
+        const course = this.course();
+        if (!course) this.setBreadCrumb(1, '');
+        else this.setBreadCrumb(1, `${course.number} ${course.name}`);
+      },
+      { allowSignalWrites: true },
+    );
+  }
+
+  public async setCourseId(courseId: string | null) {
     if (!courseId) {
       this._courseId.set(undefined);
       return;
     }
-    this._courseId.set(GUID(courseId));
+    const cId = GUID(courseId);
+    this._courseId.set(cId);
+    console.log('course id set');
   }
   //endregion
 

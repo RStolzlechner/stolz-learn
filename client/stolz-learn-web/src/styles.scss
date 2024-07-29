@@ -17,11 +17,12 @@
 @import "app/styles/classes/header";
 @import "app/styles/classes/dialog";
 @import "app/styles/classes/status-messages";
+@import "app/styles/classes/course-card";
 
 @import "app/styles/icons/icons";
 
 body {
   font-family: CreatoDisplay, sans-serif;
-  @extend .bg-surface-1;
+  @extend .bg-surface-2;
   @extend .text-regular;
 }

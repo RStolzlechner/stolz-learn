@@ -1,0 +1,20 @@
+.course-card {
+  @extend .p-4;
+  @extend .mb-4;
+  @extend .bg-surface-1;
+  @extend .cursor-pointer;
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--surface-3);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}

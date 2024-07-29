@@ -13,6 +13,6 @@ export class CourseComponent implements OnInit {
   private readonly routingService = inject(RoutingService);
 
   ngOnInit() {
-    this.routingService.setBreadCrumb(2, BreadcrumbLabels.course);
+    this.routingService.setBreadCrumb(2, BreadcrumbLabels.overview);
   }
 }
