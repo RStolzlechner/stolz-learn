@@ -44,7 +44,6 @@ export class RoutingService {
     }
     const cId = GUID(courseId);
     this._courseId.set(cId);
-    console.log('course id set');
   }
   //endregion
 

@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { RoutingService } from '../../services/routing.service';
 import { Subscription } from 'rxjs';
 import { CoursesRoutes } from '../../app.routes';
+import { CourseService } from '../../services/course.service';
 
 @Component({
   selector: 'app-course-base',
@@ -14,10 +15,12 @@ import { CoursesRoutes } from '../../app.routes';
 export class CourseBaseComponent implements OnInit, OnDestroy {
   private readonly route = inject(ActivatedRoute);
   private readonly routingService = inject(RoutingService);
+  private readonly courseService = inject(CourseService);
 
   private routeSubscription!: Subscription;
 
   async ngOnInit() {
+    await this.courseService.loadCourses({ isArchived: false });
     this.routeSubscription = this.route.paramMap.subscribe((pm) => {
       const courseId = pm.get(CoursesRoutes.courseId);
       this.routingService.setCourseId(courseId);

@@ -28,10 +28,15 @@ import { CoursesLabels } from '../../translations/courses.translations';
         <div>{{ coursesLabels.noUnarchivedCourseFound }}</div>
       }
     </div>
-    <div>
+    <div class="flex justify-between">
       <button class="mt-4 button-primary" (click)="onNewCourse()">
         <i class="icon icon-plus"></i>
         <span class="ml-2">{{ buttonLabels.newCourse }}</span>
+      </button>
+
+      <button class="mt-4 button-secondary" (click)="onArchive()">
+        <i class="icon icon-trash"></i>
+        <span class="ml-2">{{ buttonLabels.archive }}</span>
       </button>
     </div>`,
   standalone: true,
@@ -50,7 +55,8 @@ export class CoursesOverviewComponent implements OnInit {
     return length > 0;
   });
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.courseService.loadCourses({ isArchived: false });
     this.routingService.setBreadCrumb(1, BreadcrumbLabels.overview);
     this.routingService.setBreadCrumb(2, '');
   }
@@ -61,5 +67,9 @@ export class CoursesOverviewComponent implements OnInit {
 
   async onSelectCourse(id: GUID) {
     await this.routingService.toCourse(id);
+  }
+
+  async onArchive() {
+    await this.routingService.toCoursesArchive();
   }
 }

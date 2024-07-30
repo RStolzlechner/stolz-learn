@@ -16,7 +16,6 @@ export class CoursesBaseComponent implements OnInit {
   private readonly routingService = inject(RoutingService);
 
   async ngOnInit() {
-    await this.courseService.loadCourses({ isArchived: false });
     this.routingService.setBreadCrumb(0, BreadcrumbLabels.courses);
   }
 }
