@@ -33,6 +33,10 @@ import { GUID } from '../../types/guid.type';
         <i class="icon icon-plus"></i>
         <span class="ml-3">{{ ButtonLabels.newQuestion }}</span>
       </button>
+      <button class="button-secondary ml-4" (click)="onBack()">
+        <i class="icon icon-back"></i>
+        <span class="ml-3">{{ ButtonLabels.back }}</span>
+      </button>
     </div>`,
   standalone: true,
   imports: [CommonModule],
@@ -60,5 +64,9 @@ export class QuestionOverviewComponent implements OnInit {
 
   async onEdit(id: GUID) {
     await this.routingService.toQuestionEdit(id);
+  }
+
+  async onBack() {
+    await this.routingService.toCourse();
   }
 }

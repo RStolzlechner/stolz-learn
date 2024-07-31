@@ -1,8 +1,6 @@
 button {
   @extend .text-action;
-  @extend .p-2;
-  @extend .pl-3;
-  @extend .pr-3;
+  @extend .p-3;
 
   display: inline-flex; /* Use flexbox for easy centering */
   align-items: center; /* Center items vertically */
@@ -10,7 +8,9 @@ button {
 
   border: 0.125rem solid transparent;
   cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
   border-radius: 0.5rem;
 
   &:hover {

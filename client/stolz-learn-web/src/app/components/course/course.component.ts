@@ -11,8 +11,11 @@ import { CoursesLabels } from '../../translations/courses.translations';
 @Component({
   selector: 'app-course',
   template: `<div>TODO Statistics here</div>
-    <div>
-      <span>TODO other Buttons</span>
+    <div class="mt-4">
+      <button class="button-primary" (click)="onStartQuestionnaire()">
+        <i class="icon icon-plus"></i>
+        <span class="ml-2">{{ ButtonLabels.startQuestionnaire }}</span>
+      </button>
       <button class="button-secondary ml-3" (click)="onQuestionsClicked()">
         <i class="icon icon-questions"></i>
         <span class="ml-2">{{ ButtonLabels.questions }}</span>
@@ -37,6 +40,7 @@ export class CourseComponent implements OnInit {
 
   ngOnInit() {
     this.routingService.setBreadCrumb(2, BreadcrumbLabels.overview);
+    this.routingService.setBreadCrumb(3, '');
   }
 
   protected readonly ButtonLabels = ButtonLabels;
@@ -67,5 +71,9 @@ export class CourseComponent implements OnInit {
 
   async onQuestionsClicked() {
     await this.routingService.toQuestionOverview();
+  }
+
+  async onStartQuestionnaire() {
+    await this.routingService.toQuestionnaireSubmit(1);
   }
 }

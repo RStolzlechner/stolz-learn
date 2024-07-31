@@ -15,6 +15,7 @@ const no = $localize`:button@@NO:No`;
 const questions = $localize`:button@@questions:Questions`;
 
 const save = $localize`:button@@save:Save`;
+const startQuestionnaire = $localize`:button@@startQuestionnaire:Start questionnaire`;
 
 const yes = $localize`:button@@YES:Yes`;
 
@@ -29,5 +30,6 @@ export const ButtonLabels = {
   no,
   questions,
   save,
+  startQuestionnaire,
   yes,
 };
