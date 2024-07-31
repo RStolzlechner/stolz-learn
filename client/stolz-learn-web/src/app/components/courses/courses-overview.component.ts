@@ -12,7 +12,7 @@ import { CoursesLabels } from '../../translations/courses.translations';
   template: `<div>
       @if (anyCourses()) {
         <div>
-          @for (course of courses(); track course; let i = $index) {
+          @for (course of courses(); track course.id; let i = $index) {
             <div
               class="course-card"
               (click)="onSelectCourse(course.id)"
@@ -59,6 +59,7 @@ export class CoursesOverviewComponent implements OnInit {
     await this.courseService.loadCourses({ isArchived: false });
     this.routingService.setBreadCrumb(1, BreadcrumbLabels.overview);
     this.routingService.setBreadCrumb(2, '');
+    this.routingService.setBreadCrumb(3, '');
   }
 
   async onNewCourse() {

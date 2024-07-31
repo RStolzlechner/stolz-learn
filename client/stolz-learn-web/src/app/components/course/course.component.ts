@@ -7,6 +7,8 @@ import { ConfirmationService } from '../../services/confirmation.service';
 import { CourseService } from '../../services/course.service';
 import { StatusMessageService } from '../../services/status-message.service';
 import { CoursesLabels } from '../../translations/courses.translations';
+import { QuestionnaireService } from '../../services/questionnaire.service';
+import { QuestionnaireLabels } from '../../translations/questionnaire.translations';
 
 @Component({
   selector: 'app-course',
@@ -37,6 +39,7 @@ export class CourseComponent implements OnInit {
   private readonly courseService = inject(CourseService);
   private readonly confirmationService = inject(ConfirmationService);
   private readonly statusService = inject(StatusMessageService);
+  private readonly questionnaireService = inject(QuestionnaireService);
 
   ngOnInit() {
     this.routingService.setBreadCrumb(2, BreadcrumbLabels.overview);
@@ -44,6 +47,7 @@ export class CourseComponent implements OnInit {
   }
 
   protected readonly ButtonLabels = ButtonLabels;
+  protected readonly QuestionnaireLabels = QuestionnaireLabels;
 
   async onEditClicked() {
     await this.routingService.toCourseEdit();
@@ -74,6 +78,15 @@ export class CourseComponent implements OnInit {
   }
 
   async onStartQuestionnaire() {
+    const ok = this.questionnaireService.start();
+    if (!ok) {
+      this.statusService.addMessage({
+        message: QuestionnaireLabels.failedToStart,
+        type: 'error',
+      });
+      return;
+    }
+
     await this.routingService.toQuestionnaireSubmit(1);
   }
 }

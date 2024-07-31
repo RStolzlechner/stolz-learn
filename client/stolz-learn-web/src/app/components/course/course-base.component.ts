@@ -41,7 +41,7 @@ export class CourseBaseComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.routeSubscription.unsubscribe();
+    if (this.routeSubscription) this.routeSubscription.unsubscribe();
     this.routingService.setCourseId(null);
   }
 }

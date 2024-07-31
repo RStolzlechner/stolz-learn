@@ -26,7 +26,7 @@ export class QuestionnaireService {
   private _statistics = signal<QuestionnaireStatistic | undefined>(undefined);
 
   allSteps = this._allSteps.asReadonly();
-  step = this._allSteps.asReadonly();
+  step = this._step.asReadonly();
   hasNext = computed(() => this.step() < this.allSteps() - 1);
   question = computed(() => this._questions()[this.step()]);
   statistics = this._statistics.asReadonly();
