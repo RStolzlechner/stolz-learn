@@ -9,7 +9,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/classes/overflow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/icons/icons/questions.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/translations/questions.translations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/course/course-base.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/course/course-base.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/course/course.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/course/course.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/question/question-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/question/question-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/question/question-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/question/question-new.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/question/question-overview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/question/question-overview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/services/question.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/services/question.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/services/routing.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/services/routing.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/classes/distances.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/classes/distances.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/classes/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/classes/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/icons/icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/icons/icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/translations/button.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/translations/button.translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Controller/QuestionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Controller/QuestionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StolzLearn.Core/Repositories/QuestionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StolzLearn.Core/Repositories/QuestionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,37 +61,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Executable.StolzLearn.Core: migrate.executor": "Run",
-    ".NET Launch Settings Profile.StolzLearn.Core.executor": "Run",
-    ".NET Launch Settings Profile.StolzLearn.Core: http.executor": "Run",
-    ".NET Launch Settings Profile.StolzLearn.Core: migrate.executor": "Debug",
-    ".NET Project.StolzLearn.Core: migrate.executor": "Run",
-    "4a90d6ff-d259-48cb-8bf7-a305adfc5b45.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "4-first-features",
-    "last_opened_file_path": "/home/ricardo/src/stolz-learn",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Settings.DiagramsNet.Preview",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Executable.StolzLearn.Core: migrate.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.StolzLearn.Core.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.StolzLearn.Core: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.StolzLearn.Core: migrate.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Project.StolzLearn.Core: migrate.executor&quot;: &quot;Run&quot;,
+    &quot;4a90d6ff-d259-48cb-8bf7-a305adfc5b45.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;4-first-features&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ricardo/src/stolz-learn&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.DiagramsNet.Preview&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora_aws",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora_aws&quot;,
+      &quot;postgresql&quot;
     ],
-    "rider.external.source.directories": [
-      "/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/home/ricardo/.local/share/Symbols/src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/home/ricardo/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/home/ricardo/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.StolzLearn.Core">
     <configuration name="StolzLearn.Core: migrate" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/StolzLearn.Core/bin/Debug/net8.0/StolzLearn.Core" />
@@ -130,6 +149,10 @@
       <workItem from="1719939415473" duration="5421000" />
       <workItem from="1720172282204" duration="7871000" />
       <workItem from="1721891818557" duration="4845000" />
+      <workItem from="1721999675404" duration="1170000" />
+      <workItem from="1722261672574" duration="1980000" />
+      <workItem from="1722315416253" duration="2593000" />
+      <workItem from="1722414854103" duration="3587000" />
     </task>
     <servers />
   </component>

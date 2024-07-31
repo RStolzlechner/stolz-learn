@@ -1,15 +1,18 @@
-input {
+input,
+textarea {
   @extend .p-2;
   @extend .pl-3;
   @extend .pr-3;
   @extend .text-regular;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   @extend .text-secondary;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   box-shadow: none;
   outline: none;
   border: 2px solid var(--primary);

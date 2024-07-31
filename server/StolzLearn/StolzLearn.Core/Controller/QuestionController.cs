@@ -33,8 +33,6 @@ public class QuestionController(
     [HttpPost]
     public async Task<IActionResult> Insert([FromBody] Question question)
     {
-        await questionService.Insert(question);
-        
         if(string.IsNullOrEmpty(question.QuestionText))
             return BadRequest("Question text is required");
         if(string.IsNullOrEmpty(question.CorrectAnswer))
@@ -75,8 +73,8 @@ public class QuestionController(
         }
     }
     
-    [HttpPut("soft-delete")]
-    public async Task<IActionResult> SoftDelete([FromBody] Guid id)
+    [HttpPut("soft-delete/{id:guid}")]
+    public async Task<IActionResult> SoftDelete([FromRoute] Guid id)
     {
         var question = (await questionService.SelectByIds([id])).ToList();
         if(question.Count != 1)

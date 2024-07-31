@@ -55,6 +55,10 @@ export class QuestionService {
 
       //don't call server; delete this when signal-r update is implemented
       this._questionIds.update((ids) => [...ids, id]);
+      question = (
+        await firstValueFrom(this.questionHttpService.selectByIds([id]))
+      )[0];
+
       this._questions.update((qs) => [...qs, question]);
     } catch (error) {
       console.error(error);

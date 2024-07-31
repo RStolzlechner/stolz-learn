@@ -9,7 +9,7 @@ public class QuestionRepository(IDbConnection connection) : IQuestionRepository
 {
     public async Task<IEnumerable<Guid>> SelectIdsByQuery(QuestionQuery query)
     {
-        var sql = new StringBuilder($"SELECT id FROM question WHERE course_id = @{nameof(query.CourseId)} AND NOT deleted ORDER BY date_create");
+        var sql = new StringBuilder($"SELECT DISTINCT id, date_create FROM question WHERE course_id = @{nameof(query.CourseId)} AND NOT deleted ORDER BY date_create");
         if (query.Limit > 0)
         {
             sql.Append($" LIMIT @{nameof(query.Limit)}");

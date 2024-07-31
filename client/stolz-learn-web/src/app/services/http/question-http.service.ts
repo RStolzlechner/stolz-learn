@@ -30,7 +30,7 @@ export class QuestionHttpService {
   }
 
   public softDelete(id: GUID) {
-    const url = `${httpUrl}question/soft-delete`;
-    return this.httpClient.put<GUID>(url, id);
+    const url = `${httpUrl}question/soft-delete/${id}`;
+    return this.httpClient.put<GUID>(url, {});
   }
 }

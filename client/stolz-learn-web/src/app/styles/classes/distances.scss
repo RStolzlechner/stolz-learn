@@ -345,6 +345,10 @@
   height: 90vh;
 }
 
+.max-h-80vh {
+  max-height: 80vh;
+}
+
 /* Width Utility Classes */
 .w-1 {
   width: var(--l1);

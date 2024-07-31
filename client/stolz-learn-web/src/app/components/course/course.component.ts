@@ -13,7 +13,11 @@ import { CoursesLabels } from '../../translations/courses.translations';
   template: `<div>TODO Statistics here</div>
     <div>
       <span>TODO other Buttons</span>
-      <button class="button-secondary" (click)="onEditClicked()">
+      <button class="button-secondary ml-3" (click)="onQuestionsClicked()">
+        <i class="icon icon-questions"></i>
+        <span class="ml-2">{{ ButtonLabels.questions }}</span>
+      </button>
+      <button class="button-secondary ml-3" (click)="onEditClicked()">
         <i class="icon icon-pencil"></i>
         <span class="ml-2">{{ ButtonLabels.edit }}</span>
       </button>
@@ -59,5 +63,9 @@ export class CourseComponent implements OnInit {
         });
       },
     });
+  }
+
+  async onQuestionsClicked() {
+    await this.routingService.toQuestionOverview();
   }
 }

@@ -26,6 +26,16 @@ export class RoutingService {
     return courses.find((course) => course.id === courseId);
   });
 
+  public async setCourseId(courseId: string | null) {
+    if (!courseId) {
+      this._courseId.set(undefined);
+      return;
+    }
+    const cId = GUID(courseId);
+    this._courseId.set(cId);
+  }
+  //endregion
+
   constructor() {
     effect(
       () => {
@@ -35,15 +45,6 @@ export class RoutingService {
       },
       { allowSignalWrites: true },
     );
-  }
-
-  public async setCourseId(courseId: string | null) {
-    if (!courseId) {
-      this._courseId.set(undefined);
-      return;
-    }
-    const cId = GUID(courseId);
-    this._courseId.set(cId);
   }
   //endregion
 
