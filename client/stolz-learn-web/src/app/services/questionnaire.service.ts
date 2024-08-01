@@ -27,8 +27,9 @@ export class QuestionnaireService {
 
   allSteps = this._allSteps.asReadonly();
   step = this._step.asReadonly();
-  hasNext = computed(() => this.step() < this.allSteps() - 1);
+  hasNext = computed(() => this.step() < this.allSteps());
   question = computed(() => this._questions()[this.step()]);
+  answer = computed(() => this._answers()[this.step()]);
   statistics = this._statistics.asReadonly();
 
   public start(steps = 10) {

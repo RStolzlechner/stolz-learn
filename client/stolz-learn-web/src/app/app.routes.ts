@@ -72,10 +72,10 @@ export enum QuestionRoutes {
 }
 
 export enum QuestionnaireRoutes {
-  questionnaireId = 'questionnaire-id',
   stepId = 'step-id',
   evaluate = 'evaluate',
   submit = 'submit',
+  statistic = 'statistic',
 }
 //endregion
 
@@ -91,7 +91,7 @@ const questionRoutes: Routes = [
 
 const questionnaireRoutes: Routes = [
   {
-    matcher: guidMatcher(QuestionnaireRoutes.questionnaireId),
+    path: QuestionnaireRoutes.statistic,
     component: QuestionnaireStatisticsComponent,
   },
   {

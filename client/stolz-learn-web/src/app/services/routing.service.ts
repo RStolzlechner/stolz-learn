@@ -137,10 +137,7 @@ export class RoutingService {
     ]);
   }
 
-  public async toQuestionnaireStatistics(
-    questionnaireId: GUID,
-    courseId?: GUID,
-  ) {
+  public async toQuestionnaireStatistics(courseId?: GUID) {
     const { ok, id } = this.getCourseId(courseId);
     if (!ok) return;
 
@@ -148,7 +145,7 @@ export class RoutingService {
       BaseRoutes.courses,
       id,
       CourseRoutes.questionnaire,
-      questionnaireId,
+      QuestionnaireRoutes.statistic,
     ]);
   }
 
