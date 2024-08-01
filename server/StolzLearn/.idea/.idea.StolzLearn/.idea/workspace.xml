@@ -9,17 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da560be0-6cce-438a-8b49-3f0727bacb1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/icons/icons/next.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/questionnaire/questionnaire-evaluate.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/questionnaire/questionnaire-evaluate.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/questionnaire/questionnaire-submit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/questionnaire/questionnaire-submit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/questionnaire/questionnaire-statistics.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/components/questionnaire/questionnaire-statistics.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/services/questionnaire.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/services/questionnaire.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/services/routing.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/services/routing.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/icons/icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/styles/icons/icons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/translations/button.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/translations/button.translations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StolzLearn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/StolzLearn.Core.Tests/obj/Debug/net8.0/StolzLearn.Core.Tests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/translations/questionnaire.translations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/stolz-learn-web/src/app/translations/questionnaire.translations.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +139,7 @@
       <workItem from="1722315416253" duration="2593000" />
       <workItem from="1722414854103" duration="4018000" />
       <workItem from="1722434495191" duration="3439000" />
-      <workItem from="1722488609724" duration="2580000" />
+      <workItem from="1722488609724" duration="3104000" />
     </task>
     <servers />
   </component>

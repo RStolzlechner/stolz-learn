@@ -1,9 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RoutingService } from '../../services/routing.service';
-import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { QuestionnaireService } from '../../services/questionnaire.service';
-import { QuestionsLabels } from '../../translations/questions.translations';
 import { ButtonLabels } from '../../translations/button.translations';
 
 @Component({

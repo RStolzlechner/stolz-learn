@@ -2,7 +2,6 @@ import { computed, inject, Injectable, signal } from '@angular/core';
 import { StatusMessageService } from './status-message.service';
 import { QuestionnaireHttpService } from './http/questionnaire-http.service';
 import { Questionnaire } from '../models/questionnaire.model';
-import { firstValueFrom } from 'rxjs';
 import { ErrorMessages } from '../translations/error-messages.translations';
 import { QuestionService } from './question.service';
 import { Question } from '../models/question.model';
@@ -29,6 +28,7 @@ export class QuestionnaireService {
   step = this._step.asReadonly();
   hasNext = computed(() => this.step() < this.allSteps());
   question = computed(() => this._questions()[this.step()]);
+  answers = this._answers.asReadonly();
   answer = computed(() => this._answers()[this.step()]);
   statistics = this._statistics.asReadonly();
 
@@ -95,10 +95,9 @@ export class QuestionnaireService {
     };
 
     try {
-      const statistics = await firstValueFrom(
-        this.questionnaireHttpService.addQuestionnaire(questionnaire),
-      );
-      this._statistics.set(statistics);
+      this.questionnaireHttpService
+        .addQuestionnaire(questionnaire)
+        .subscribe((statistics) => this._statistics.set(statistics));
 
       return true;
     } catch (error) {
