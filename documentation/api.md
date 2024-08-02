@@ -9,8 +9,7 @@
 
 2. **[POST] /course/get-by-ids**
     - **Body:** List of IDs
-    - **BadRequest:** If any ID is not found in the database
-    - **Returns:** List of course objects
+    - **Returns:** List of found course objects
     - **Notes:** Fetch course objects
 
 3. **[PUT] /course/archive/{id}**
@@ -44,8 +43,9 @@
 ### Questionnaire Management
 
 8. **[POST] /questionnaire**
-    - **Body:** Array of QuestionIds and RightWrongFlags
-    - **BadRequest:** If any ID is not found in the database
+    - **Body:** Questionnaire Object (courseId with answer array)
+    - **BadRequest:** If courseId or any questionID is not found in the database
+    - **BadRequest:** If a answer string is empty
     - **Hub:** `onCourseChanged(id)`
     - **Returns:** Questionnaire statistics if OK
     - **Notes:** Consider returning the course status if it changes due to the questionnaire completion.
@@ -67,17 +67,16 @@
     - **Body:** Question object
     - **BadRequest:** If the answer or question is empty
     - **Hub:** `onCourseChanged(id)`
-    - **Returns:** OK if success
+    - **Returns:** 200 with ID if OK
 
 12. **[PUT] /question**
     - **Body:** Question object
-    - **BadRequest:** If not found in the database
+    - **BadRequest:** If the answer or question is empty
     - **Hub:** `onCourseChanged(id)`
     - **Returns:** OK if success
 
-13. **[PUT] /question/delete** (Sets deletion flag)
-    - **Body:** Question object
-    - **BadRequest:** If not found in the database
+13. **[PUT] /question/soft-delete** (Sets deletion flag)
+    - **Body:** id of the question
+    - **BadRequest:** If the question is not present
     - **Hub:** `onCourseChanged(id)`
     - **Returns:** OK if success
-    - **Notes:** Consider renaming the endpoint to `question/soft-delete` for clarity.

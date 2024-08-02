@@ -1,0 +1,33 @@
+<!--Header-->
+<div class="header">
+  <div class="header-icon">
+    <img
+      src="icons/logo.svg"
+      alt="RL Logo"
+      class="w-6"
+      (click)="routeToHome()"
+      (keydown.enter)="routeToHome()"
+      tabindex="0"
+    />
+  </div>
+  <div class="ml-5 w-percent-90 p-3">
+    @for (
+      breadcrumb of breadcrumbValues();
+      track breadcrumb;
+      let index = $index
+    ) {
+      <span>{{ breadcrumb }}</span>
+      @if (index !== breadcrumbValues().length - 1) {
+        <span class="ml-2 mr-2">></span>
+      }
+    }
+  </div>
+</div>
+<div class="header-spacer"></div>
+<div class="h-screen" style="overflow: auto">
+  <router-outlet />
+</div>
+
+<!--Popups-->
+<app-status-message />
+<app-confirmation-dialog />

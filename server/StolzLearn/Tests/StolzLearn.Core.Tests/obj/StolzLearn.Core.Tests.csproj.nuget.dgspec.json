@@ -1,0 +1,173 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/StolzLearn.Core.Tests.csproj": {}
+  },
+  "projects": {
+    "/home/ricardo/src/stolz-learn/server/StolzLearn/StolzLearn.Core/StolzLearn.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ricardo/src/stolz-learn/server/StolzLearn/StolzLearn.Core/StolzLearn.Core.csproj",
+        "projectName": "StolzLearn.Core",
+        "projectPath": "/home/ricardo/src/stolz-learn/server/StolzLearn/StolzLearn.Core/StolzLearn.Core.csproj",
+        "packagesPath": "/home/ricardo/.nuget/packages/",
+        "outputPath": "/home/ricardo/src/stolz-learn/server/StolzLearn/StolzLearn.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ricardo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "FluentMigrator.Runner.Postgres": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/ricardo/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/StolzLearn.Core.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/StolzLearn.Core.Tests.csproj",
+        "projectName": "StolzLearn.Core.Tests",
+        "projectPath": "/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/StolzLearn.Core.Tests.csproj",
+        "packagesPath": "/home/ricardo/.nuget/packages/",
+        "outputPath": "/home/ricardo/src/stolz-learn/server/StolzLearn/Tests/StolzLearn.Core.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ricardo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/ricardo/src/stolz-learn/server/StolzLearn/StolzLearn.Core/StolzLearn.Core.csproj": {
+                "projectPath": "/home/ricardo/src/stolz-learn/server/StolzLearn/StolzLearn.Core/StolzLearn.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.6.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/ricardo/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

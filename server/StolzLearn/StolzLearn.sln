@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StolzLearn.Core", "StolzLearn.Core\StolzLearn.Core.csproj", "{043109AD-F256-4601-BE42-39D4D2D3C45A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C5434A6C-3A67-4840-B826-CA0888CA7DD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StolzLearn.Core.Tests", "Tests\StolzLearn.Core.Tests\StolzLearn.Core.Tests.csproj", "{637D16E5-A36B-4301-AB84-614A0E052440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{043109AD-F256-4601-BE42-39D4D2D3C45A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043109AD-F256-4601-BE42-39D4D2D3C45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043109AD-F256-4601-BE42-39D4D2D3C45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043109AD-F256-4601-BE42-39D4D2D3C45A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637D16E5-A36B-4301-AB84-614A0E052440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637D16E5-A36B-4301-AB84-614A0E052440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637D16E5-A36B-4301-AB84-614A0E052440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637D16E5-A36B-4301-AB84-614A0E052440}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{637D16E5-A36B-4301-AB84-614A0E052440} = {C5434A6C-3A67-4840-B826-CA0888CA7DD0}
+	EndGlobalSection
+EndGlobal

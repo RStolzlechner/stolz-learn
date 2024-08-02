@@ -1,0 +1,35 @@
+.text-header {
+  font-size: 1.75rem;
+  letter-spacing: 0.075rem;
+  font-weight: 700;
+  color: var(--text-color-main);
+  line-height: 3rem;
+}
+
+.text-caption {
+  font-size: 1rem;
+  letter-spacing: 0.075rem;
+  font-weight: 700;
+  color: var(--text-color-main);
+  line-height: 1.5rem;
+}
+
+.text-regular {
+  font-size: 1.125rem;
+  letter-spacing: 0.075rem;
+  color: var(--text-color-main);
+}
+
+.text-secondary {
+  font-size: 1rem;
+  letter-spacing: 0.075rem;
+  font-weight: 400;
+  color: var(--text-color-secondary);
+}
+
+.text-action {
+  font-size: 1.125rem;
+  letter-spacing: 0.075rem;
+  font-weight: 700;
+  color: var(--text-color-main);
+}

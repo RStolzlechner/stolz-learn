@@ -1,0 +1,63 @@
+.icon {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 1.2em;
+  height: 1.2em;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  background-color: currentColor;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  vertical-align: middle;
+}
+
+.icon-times {
+  -webkit-mask: url("icons/times.svg");
+  mask: url("icons/times.svg");
+}
+
+.icon-trash {
+  -webkit-mask: url("icons/trash.svg");
+  mask: url("icons/trash.svg");
+}
+
+.icon-pencil {
+  -webkit-mask: url("icons/pencil.svg");
+  mask: url("icons/pencil.svg");
+}
+
+.icon-plus {
+  -webkit-mask: url("icons/plus.svg");
+  mask: url("icons/plus.svg");
+}
+
+.icon-save {
+  -webkit-mask: url("icons/save.svg");
+  mask: url("icons/save.svg");
+}
+
+.icon-restore {
+  -webkit-mask: url("icons/restore.svg");
+  mask: url("icons/restore.svg");
+}
+
+.icon-back {
+  -webkit-mask: url("icons/back.svg");
+  mask: url("icons/back.svg");
+}
+
+.icon-questions {
+  -webkit-mask: url("icons/questions.svg");
+  mask: url("icons/questions.svg");
+}
+
+.icon-next {
+  -webkit-mask: url("icons/next.svg");
+  mask: url("icons/next.svg");
+}

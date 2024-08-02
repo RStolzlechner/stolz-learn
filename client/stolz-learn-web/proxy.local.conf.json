@@ -1,0 +1,9 @@
+{
+  "/stolz-learn-server/**": {
+    "target": "http://localhost:5242",
+    "secure": false,
+    "changeOrigin": true,
+    "ws": true,
+    "pathRewrite": {"^/stolz-learn-server": ""}
+  }
+}
