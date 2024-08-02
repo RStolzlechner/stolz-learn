@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, effect, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RoutingService } from '../../services/routing.service';
 import { BreadcrumbLabels } from '../../translations/breadcrumb.translations';
@@ -9,10 +9,13 @@ import { StatusMessageService } from '../../services/status-message.service';
 import { CoursesLabels } from '../../translations/courses.translations';
 import { QuestionnaireService } from '../../services/questionnaire.service';
 import { QuestionnaireLabels } from '../../translations/questionnaire.translations';
+import { CourseStatisticModel } from '../../models/course-statistic.model';
+import { Chart, registerables } from 'chart.js';
+import 'chartjs-adapter-date-fns';
 
 @Component({
   selector: 'app-course',
-  template: `<div>TODO Statistics here</div>
+  template: ` <canvas id="courseChart" class="w-percent-90 h-60vh"></canvas>
     <div class="mt-4">
       <button class="button-primary" (click)="onStartQuestionnaire()">
         <i class="icon icon-plus"></i>
@@ -40,6 +43,25 @@ export class CourseComponent implements OnInit {
   private readonly confirmationService = inject(ConfirmationService);
   private readonly statusService = inject(StatusMessageService);
   private readonly questionnaireService = inject(QuestionnaireService);
+
+  constructor() {
+    effect(
+      async () => {
+        const courseId = this.routingService.courseId();
+        if (!courseId) return;
+
+        const courseStatistics =
+          await this.courseService.getCourseStatistic(courseId);
+
+        if (courseStatistics) {
+          this.createChart(courseStatistics);
+        }
+      },
+      { allowSignalWrites: true },
+    );
+
+    Chart.register(...registerables);
+  }
 
   ngOnInit() {
     this.routingService.setBreadCrumb(2, BreadcrumbLabels.overview);
@@ -88,5 +110,59 @@ export class CourseComponent implements OnInit {
     }
 
     await this.routingService.toQuestionnaireSubmit(1);
+  }
+
+  private createChart(courseStatistics: CourseStatisticModel): void {
+    const ctx = (
+      document.getElementById('courseChart') as HTMLCanvasElement
+    ).getContext('2d');
+    if (!ctx) {
+      console.error('CourseComponent::createChart canvas not found');
+      return;
+    }
+
+    const data = courseStatistics.dayDataPoints;
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.map((item) => item.date, false), // Format dates as you prefer
+        datasets: [
+          {
+            label: 'Correct Count',
+            data: data.map((item) => item.correctCnt),
+            borderColor: 'rgb(75, 192, 192)',
+            backgroundColor: 'rgba(75, 192, 192, 0.5)',
+          },
+          {
+            label: 'Question Count',
+            data: data.map((item) => item.questionCnt),
+            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          },
+        ],
+      },
+      options: {
+        scales: {
+          x: {
+            type: 'time',
+            time: {
+              unit: 'day',
+              tooltipFormat: 'MMM dd, yyyy', // Specify the display format for tooltips
+            },
+            title: {
+              display: true,
+              text: 'Date',
+            },
+          },
+          y: {
+            beginAtZero: true, // Adjust this based on your data
+            title: {
+              display: true,
+              text: 'Count',
+            },
+          },
+        },
+      },
+    });
   }
 }

@@ -136,4 +136,10 @@ export class CourseService {
       });
     }
   }
+
+  public async loadStatistics(courseId: GUID) {
+    return await firstValueFrom(
+      this.courseHttpService.getCourseStatistic(courseId),
+    );
+  }
 }
